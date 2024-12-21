@@ -4,7 +4,7 @@
 
 # Patrocina Este proyecto 
 
-https://www.paypal.com/paypalme/Chicook?country.x=ES&locale.x=es_ES
+[https://www.paypal.com/paypalme/Chicook?country.x=ES&locale.x=es_ES](https://www.paypal.com/donate/?hosted_button_id=L4D4P3V9UH3EQ)
 
 esta haun en desarrollo esta parte del
 código Abierto., para ser como los demas proyectos.
