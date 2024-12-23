@@ -19,5 +19,5 @@ def main():
     # Iniciar servidor
     socketio.run(app, debug=True)
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
