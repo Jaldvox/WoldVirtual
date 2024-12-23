@@ -1,7 +1,7 @@
-from usuarios  import usuarios, registrar_usuario, verificar_credenciales, manejar_accion
-from recursos  import RecursosUsuario, MonitoreoRecursos
+from usuarios   import usuarios, registrar_usuario, verificar_credenciales, manejar_accion
+from recursos   import RecursosUsuario, MonitoreoRecursos
 from Blockchain import Blockchain,
-from database  import conectar_base_datos,
+from database   import conectar_base_datos,
 from compresion import comprimir_y_guardar_datos, cargar_y_descomprimir_datos
 from servidor   import app, socketio
 
