@@ -1,7 +1,3 @@
-#### **BK_Usuarios.py**
-# python
-# BK_Usuarios.py
-
 usuarios = {}
 
 def inicializar_usuarios():
