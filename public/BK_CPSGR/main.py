@@ -1,9 +1,9 @@
-from usuarios.usuarios  import usuarios, registrar_usuario, verificar_credenciales, manejar_accion,
-from recursos.recursos  import RecursosUsuario, MonitoreoRecursos
-from blockchain.Blockchain import Blockchain,
-from database.database  import conectar_base_datos,
-from compresion.compresion import comprimir_y_guardar_datos, cargar_y_descomprimir_datos,
-from servidor.servidor   import app, socketio,
+from usuarios   import usuarios, registrar_usuario, verificar_credenciales, manejar_accion
+from recursos   import RecursosUsuario, MonitoreoRecursos
+from Blockchain import Blockchain,
+from database   import conectar_base_datos,
+from compresion import comprimir_y_guardar_datos, cargar_y_descomprimir_datos
+from servidor   import app, socketio
 
 def main():
     # Inicializar recursos
