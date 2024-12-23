@@ -4,8 +4,15 @@ from STMDL.BK_ST2 import registrar_usuario
 from STMDL.BK_ST3 import verificar_credenciales
 from STMDL.BK_ST4 import manejar_accion
 from STMDL.BK_Usuarios import inicializar_usuarios
-from STMDL.BK_ST5BKCH 
+from STMDL.BK_ST5BKCH  import add_block, display_blockchain
 
+if __name__ == '__main__':
+    # Datos de prueba para la blockchain
+    data = 'Datos del paquete de módulos'
+    add_block(data)
+
+    # Mostrar la blockchain
+    display_blockchain()
 
 if __name__ == '__main__':
     # Inicializar sistema de usuarios
