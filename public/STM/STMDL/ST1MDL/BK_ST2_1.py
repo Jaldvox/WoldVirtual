@@ -1,59 +1,36 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
+from ST1MDL.blockchain import Blockchain
 
+# Inicializar Flask y la blockchain
 app = Flask(__name__)
-
-# HTML code as a multi-line string
-html_code = '''
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blockchain Demo</title>
-</head>
-<body>
-    <h1>Blockchain Demo</h1>
-    
-    <button onclick="generarNuevoBloque()">Generar Nuevo Bloque</button>
-    <div id="resultado"></div>
-
-    <script>
-        function generarNuevoBloque() {
-            fetch('/nuevo_bloque?prueba=123&hash_anterior=abc')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('resultado').innerHTML = `<p>${data.mensaje}</p><pre>${JSON.stringify(data.bloque, null, 2)}</pre>`;
-                })
-                .catch(error => console.error('Error:', error));
-        }
-    </script>
-</body>
-</html>
-'''
+blockchain = Blockchain()
 
 @app.route('/')
 def index():
-    return html_code
+    """
+    Página principal: carga el HTML desde una plantilla.
+    """
+    return render_template('index.html')
 
 @app.route('/nuevo_bloque', methods=['GET'])
 def nuevo_bloque():
+    """
+    Genera un nuevo bloque en la blockchain basado en los datos recibidos por parámetros.
+    """
     prueba = request.args.get('prueba')
     hash_anterior = request.args.get('hash_anterior')
-    
-    # Aquí debes generar el nuevo bloque usando `prueba` y `hash_anterior`
-    nuevo_bloque = {
-        "index": 1,
-        "timestamp": "2024-12-23T15:53:11",
-        "datos": prueba,
-        "hash_anterior": hash_anterior,
-        "hash": "nuevo_hash_generado"
-    }
-    
+
+    # Validar los parámetros requeridos
+    if not prueba or not hash_anterior:
+        return jsonify({"error": "Parámetros 'prueba' y 'hash_anterior' son requeridos"}), 400
+
+    # Crear y añadir un nuevo bloque
+    nuevo_bloque = blockchain.add_block(prueba, hash_anterior)
+
     response = {
         "mensaje": "Nuevo bloque generado con éxito",
         "bloque": nuevo_bloque
     }
-    
     return jsonify(response)
 
 if __name__ == '__main__':
