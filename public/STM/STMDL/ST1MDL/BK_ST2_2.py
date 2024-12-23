@@ -1,23 +1,59 @@
-def main():
-    # Inicializar recursos
-    recursos_usuario = RecursosUsuario(50, 50)  # Ejemplo de inicialización con 50% de CPU y ancho de banda
+import hashlib
+import time
 
-    # Conectar a la base de datos
-    db = conectar_base_datos()
+class Block:
+    def __init__(self, index, previous_hash, timestamp, data, hash):
+        self.index = index
+        self.previous_hash = previous_hash
+        self.timestamp = timestamp
+        self.data = data
+        self.hash = hash
 
-    # Crear un nuevo usuario
-    registrar_usuario("nombre", "contraseña")
+    def to_dict(self):
+        """Convierte el bloque en un diccionario para su representación JSON."""
+        return {
+            "index": self.index,
+            "previous_hash": self.previous_hash,
+            "timestamp": self.timestamp,
+            "data": self.data,
+            "hash": self.hash
+        }
 
-    # Ejecutar compresión de datos
-    datos_usuario = {"nombre": "nombre", "datos": "datos_ejemplo"}
-    comprimir_y_guardar_datos(datos_usuario, "datos_comprimidos.gz")
+class Blockchain:
+    def __init__(self):
+        """Inicializa la blockchain con el bloque génesis."""
+        self.chain = [self.create_genesis_block()]
 
-    # Procesar transacción en la blockchain
-    blockchain = Blockchain()
-    blockchain.agregar_bloque("transaccion_ejemplo")
+    def create_genesis_block(self):
+        """Crea el bloque génesis de la blockchain."""
+        return Block(
+            0, 
+            "0", 
+            int(time.time()), 
+            "Genesis Block", 
+            self.calculate_hash(0, "0", int(time.time()), "Genesis Block")
+        )
 
-    # Iniciar servidor
-    socketio.run(app, debug=True)
+    def calculate_hash(self, index, previous_hash, timestamp, data):
+        """Calcula el hash de un bloque."""
+        return hashlib.sha256(f"{index}{previous_hash}{timestamp}{data}".encode()).hexdigest()
 
-if __name__ == "__main__":
-    main()
+    def create_new_block(self, previous_block, data):
+        """Crea un nuevo bloque basado en el bloque anterior."""
+        index = previous_block.index + 1
+        timestamp = int(time.time())
+        hash = self.calculate_hash(index, previous_block.hash, timestamp, data)
+        return Block(index, previous_block.hash, timestamp, data, hash)
+
+    def add_block(self, data, previous_hash):
+        """Añade un nuevo bloque a la cadena."""
+        previous_block = self.chain[-1]
+
+        # Validar el hash anterior proporcionado
+        if previous_hash != previous_block.hash:
+            raise ValueError("El hash anterior no coincide con el último bloque de la cadena.")
+
+        # Crear y añadir el nuevo bloque
+        new_block = self.create_new_block(previous_block, data)
+        self.chain.append(new_block)
+        return new_block.to_dict()
