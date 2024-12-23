@@ -1,5 +1,3 @@
-# principal.py
-
 from STMDL.BK_ST2 import registrar_usuario
 from STMDL.BK_ST3 import verificar_credenciales
 from STMDL.BK_ST4 import manejar_accion
