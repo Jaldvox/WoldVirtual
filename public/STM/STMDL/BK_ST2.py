@@ -1,6 +1,6 @@
 import hashlib
 from STMDL.BK_Usuarios import usuarios
-from 
+from ST1MDL.BK_ST2_2.py
 
 def registrar_usuario(username, password):
     """
