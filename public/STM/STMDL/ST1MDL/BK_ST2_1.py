@@ -1,7 +1,8 @@
+from flask import Flask, request, jsonify
+
 app = Flask(__name__)
 
-# ... (Importaciones ya realizadas en la primera parte del código) #
-
+# HTML code as a multi-line string
 html_code = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@ html_code = '''
 
     <script>
         function generarNuevoBloque() {
-            fetch('http://localhost:5000/nuevo_bloque?prueba=123&hash_anterior=abc')
+            fetch('/nuevo_bloque?prueba=123&hash_anterior=abc')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('resultado').innerHTML = `<p>${data.mensaje}</p><pre>${JSON.stringify(data.bloque, null, 2)}</pre>`;
@@ -31,4 +32,29 @@ html_code = '''
 '''
 
 @app.route('/')
-http://localhost:5000/nuevo_bloque?prueba=123&hash_anterior=abc
+def index():
+    return html_code
+
+@app.route('/nuevo_bloque', methods=['GET'])
+def nuevo_bloque():
+    prueba = request.args.get('prueba')
+    hash_anterior = request.args.get('hash_anterior')
+    
+    # Aquí debes generar el nuevo bloque usando `prueba` y `hash_anterior`
+    nuevo_bloque = {
+        "index": 1,
+        "timestamp": "2024-12-23T15:53:11",
+        "datos": prueba,
+        "hash_anterior": hash_anterior,
+        "hash": "nuevo_hash_generado"
+    }
+    
+    response = {
+        "mensaje": "Nuevo bloque generado con éxito",
+        "bloque": nuevo_bloque
+    }
+    
+    return jsonify(response)
+
+if __name__ == '__main__':
+    app.run(debug=True)
