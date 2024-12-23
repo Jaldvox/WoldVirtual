@@ -1,6 +1,7 @@
 import os
 from .IABK1 import Blockchain,
 from .IABK2 import SimpleAI,
+import .__init__.py 
 
 class System:
     def __init__(self):
