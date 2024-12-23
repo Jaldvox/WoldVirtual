@@ -4,6 +4,7 @@ from STMDL.BK_ST2 import registrar_usuario
 from STMDL.BK_ST3 import verificar_credenciales
 from STMDL.BK_ST4 import manejar_accion
 from STMDL.BK_Usuarios import inicializar_usuarios
+from STMDL.BK_ST5BKCH 
 
 
 if __name__ == '__main__':
