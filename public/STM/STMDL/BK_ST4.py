@@ -1,3 +1,5 @@
+# modulos/BK_ST4.py
+
 def manejar_accion(usuario, accion):
     """
     Realiza una acción específica para el usuario.
