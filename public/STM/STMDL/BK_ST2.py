@@ -1,12 +1,10 @@
 import hashlib
-from BK_Usuarios import usuarios
+from modulos.BK_Usuarios import usuarios
 
 def registrar_usuario(username, password):
     """
     Registra un nuevo usuario con su contraseña.
-    Devuelve True si el usuario fue registrado, 
-    False si ya existe.
-    
+    Devuelve True si el usuario fue registrado, False si ya existe.
     """
     if username in usuarios:
         return False
