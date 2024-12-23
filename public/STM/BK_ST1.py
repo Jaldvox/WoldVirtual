@@ -1,7 +1,9 @@
-from STMDL.BK_ST2 import registrar_usuario
-from STMDL.BK_ST3 import verificar_credenciales
-from STMDL.BK_ST4 import manejar_accion
-from STMDL.BK_Usuarios import inicializar_usuarios
+# principal.py
+
+from BK_ST2 import registrar_usuario
+from BK_ST3 import verificar_credenciales
+from BK_ST4 import manejar_accion
+from BK_Usuarios import inicializar_usuarios
 
 if __name__ == '__main__':
     # Inicializar sistema de usuarios
@@ -22,3 +24,6 @@ if __name__ == '__main__':
         print(f'Credenciales verificadas con éxito para "{username}".')
     else:
         print(f'Error: Fallo al verificar credenciales para "{username}".')
+
+    # Manejar acción
+    manejar_accion(username, "explorar")
