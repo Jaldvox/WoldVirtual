@@ -1,5 +1,5 @@
 #### **BK_Usuarios.py**
-```python
+# python
 # BK_Usuarios.py
 
 usuarios = {}
