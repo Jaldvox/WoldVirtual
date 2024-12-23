@@ -5,6 +5,7 @@ def verificar_credenciales(username, password):
     """
     Verifica si las credenciales del usuario son correctas.
     Devuelve True si coinciden, False en caso contrario.
+    
     """
     if username not in usuarios:
         print(f'Error: El usuario "{username}" no existe.')
