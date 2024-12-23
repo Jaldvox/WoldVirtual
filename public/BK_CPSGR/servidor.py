@@ -1,13 +1,14 @@
 from flask import Flask, render_template_string
 from flask_socketio import SocketIO,
-import reflex as rx
+# import reflex as rx
 
 app = Flask(__name__)
 socketio = SocketIO(app)
 
+"""
 app = rx.App()
-
 def layout():
+
     return rx.div(
         rx.header(
             rx.h1("Metaverso Crypto 3D", class_name="header"),
@@ -70,8 +71,10 @@ def layout():
         ),
         class_name="body"
     )
-    
+  """  
 app.add_page(layout)
+"""
+"""
     
 @socketio.on('audio_stream')
 def handle_audio(data):
