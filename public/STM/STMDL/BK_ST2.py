@@ -1,32 +1,21 @@
-from BK_ST2_1 import crear_bloque_genesis, agregar_bloque, guardar_blockchain, cargar_blockchain
-from BK_ST2_1_nodo import iniciar_servidor
-from BK_ST2_1_sincronizacion import sincronizar_blockchain
 import hashlib
 from STMDL.BK_Usuarios import usuarios
-
-def registrar_usuario(username, password):
-    """
-    Registra un nuevo usuario con su contraseña.
-    Devuelve True si el usuario fue registrado, False si ya existe.
-    """
-    if username in usuarios:
-        return False
-    hashed_password = hashlib.sha256(password.encode()).hexdigest()
-    usuarios[username] = hashed_password
-    return True
+from BK_ST2_2 import agregar_bloque
+from BK_ST2_3 import sincronizar_blockchain
+from BK_ST2_4 import iniciar_servidor
+from BK_ST2_1 import cargar_blockchain, guardar_blockchain, crear_bloque_genesis
 
 def iniciar_red():
     """
-    Esta función será el punto de entrada para iniciar el nodo y sincronizarlo con otros nodos.
-    Primero, se asegura de que la blockchain esté sincronizada con la de otros nodos y luego
-    arranca el servidor del nodo local.
+    Esta función se encarga de iniciar el nodo y sincronizarlo con otros nodos.
+    Primero sincroniza la blockchain y luego inicia el servidor.
     """
     print("Iniciando la sincronización de la blockchain con otros nodos...")
     
     # Sincronizar la blockchain con otros nodos
     blockchain = sincronizar_blockchain()
     
-    # Verificar si la blockchain local está vacía o es el bloque génesis
+    # Verificar si la blockchain local está vacía o si solo tiene el bloque génesis
     if len(blockchain) == 1:  # Solo contiene el bloque génesis
         print("Blockchain vacía. Creando el bloque génesis...")
         blockchain = [crear_bloque_genesis()]  # Crear el bloque génesis si no existe
@@ -58,7 +47,6 @@ def agregar_bloque_a_la_red(datos):
 if __name__ == "__main__":
     """
     El archivo principal. Aquí puedes elegir qué funcionalidad deseas ejecutar.
-    Por ejemplo, puedes iniciar el nodo y sincronizar la blockchain con otros nodos.
     """
     # Llamada para iniciar la red de nodos
     iniciar_red()
@@ -66,3 +54,15 @@ if __name__ == "__main__":
     # Si deseas agregar bloques manualmente:
     # Puedes descomentar la siguiente línea para agregar un bloque con datos personalizados.
     # agregar_bloque_a_la_red("Este es un nuevo bloque con información.")
+
+
+def registrar_usuario(username, password):
+    """
+    Registra un nuevo usuario con su contraseña.
+    Devuelve True si el usuario fue registrado, False si ya existe.
+    """
+    if username in usuarios:
+        return False
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    usuarios[username] = hashed_password
+    return True
