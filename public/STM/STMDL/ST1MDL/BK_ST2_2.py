@@ -1,59 +1,48 @@
+import json
 import hashlib
-import time
+import datetime
 
-class Block:
-    def __init__(self, index, previous_hash, timestamp, data, hash):
-        self.index = index
-        self.previous_hash = previous_hash
-        self.timestamp = timestamp
-        self.data = data
-        self.hash = hash
+# Función para calcular el hash de un bloque
+def calcular_hash(bloque):
+    bloque_str = f"{bloque['index']}{bloque['timestamp']}{bloque['data']}{bloque['prev_hash']}"
+    return hashlib.sha256(bloque_str.encode()).hexdigest()
 
-    def to_dict(self):
-        """Convierte el bloque en un diccionario para su representación JSON."""
-        return {
-            "index": self.index,
-            "previous_hash": self.previous_hash,
-            "timestamp": self.timestamp,
-            "data": self.data,
-            "hash": self.hash
-        }
+# Función para crear el bloque génesis
+def crear_bloque_genesis():
+    return {
+        "index": 0,
+        "timestamp": str(datetime.datetime.now()),
+        "data": "Bloque génesis",
+        "prev_hash": "0",
+        "hash": "c3edb8a9509bee926eccb4edc957f0304a122585bab876e551c1ef6999031575"
+    }
 
-class Blockchain:
-    def __init__(self):
-        """Inicializa la blockchain con el bloque génesis."""
-        self.chain = [self.create_genesis_block()]
+# Función para agregar un nuevo bloque a la cadena
+def agregar_bloque(blockchain, datos):
+    ultimo_bloque = blockchain[-1]
+    nuevo_bloque = {
+        "index": len(blockchain),
+        "timestamp": str(datetime.datetime.now()),
+        "data": datos,
+        "prev_hash": ultimo_bloque["hash"],
+        "hash": calcular_hash({
+            "index": len(blockchain),
+            "timestamp": str(datetime.datetime.now()),
+            "data": datos,
+            "prev_hash": ultimo_bloque["hash"]
+        })
+    }
+    blockchain.append(nuevo_bloque)
 
-    def create_genesis_block(self):
-        """Crea el bloque génesis de la blockchain."""
-        return Block(
-            0, 
-            "0", 
-            int(time.time()), 
-            "Genesis Block", 
-            self.calculate_hash(0, "0", int(time.time()), "Genesis Block")
-        )
+# Función para guardar la blockchain en un archivo
+def guardar_blockchain(blockchain, archivo="blockchain.json"):
+    with open(archivo, "w") as f:
+        json.dump(blockchain, f)
 
-    def calculate_hash(self, index, previous_hash, timestamp, data):
-        """Calcula el hash de un bloque."""
-        return hashlib.sha256(f"{index}{previous_hash}{timestamp}{data}".encode()).hexdigest()
-
-    def create_new_block(self, previous_block, data):
-        """Crea un nuevo bloque basado en el bloque anterior."""
-        index = previous_block.index + 1
-        timestamp = int(time.time())
-        hash = self.calculate_hash(index, previous_block.hash, timestamp, data)
-        return Block(index, previous_block.hash, timestamp, data, hash)
-
-    def add_block(self, data, previous_hash):
-        """Añade un nuevo bloque a la cadena."""
-        previous_block = self.chain[-1]
-
-        # Validar el hash anterior proporcionado
-        if previous_hash != previous_block.hash:
-            raise ValueError("El hash anterior no coincide con el último bloque de la cadena.")
-
-        # Crear y añadir el nuevo bloque
-        new_block = self.create_new_block(previous_block, data)
-        self.chain.append(new_block)
-        return new_block.to_dict()
+# Función para cargar la blockchain desde un archivo
+def cargar_blockchain(archivo="blockchain.json"):
+    try:
+        with open(archivo, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return [crear_bloque_genesis()]  # Si no existe, crea el bloque génesis.
