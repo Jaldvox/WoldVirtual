@@ -1,0 +1,7 @@
+{
+    "nodos": [
+        "http://nodo_principal:5000",
+        "http://nodo_secundario:5000"
+    ],
+    "hash_genesis": "c3edb8a9509bee926eccb4edc957f0304a122585bab876e551c1ef6999031575"
+}
