@@ -1,37 +1,29 @@
-from flask import Flask, request, jsonify, render_template
-from ST1MDL.blockchain import Blockchain
+from flask import Flask, jsonify, request
+import json
+import requests
+from BK_ST2_1 import cargar_blockchain, agregar_bloque, guardar_blockchain
+from BK_ST2_1_sincronizacion import sincronizar_blockchain
 
-# Inicializar Flask y la blockchain
 app = Flask(__name__)
-blockchain = Blockchain()
 
-@app.route('/')
-def index():
-    """
-    Página principal: carga el HTML desde una plantilla.
-    """
-    return render_template('index.html')
+# Cargar la blockchain localmente
+blockchain = cargar_blockchain()
 
-@app.route('/nuevo_bloque', methods=['GET'])
-def nuevo_bloque():
-    """
-    Genera un nuevo bloque en la blockchain basado en los datos recibidos por parámetros.
-    """
-    prueba = request.args.get('prueba')
-    hash_anterior = request.args.get('hash_anterior')
+@app.route('/blockchain', methods=['GET'])
+def obtener_blockchain():
+    return jsonify(blockchain), 200
 
-    # Validar los parámetros requeridos
-    if not prueba or not hash_anterior:
-        return jsonify({"error": "Parámetros 'prueba' y 'hash_anterior' son requeridos"}), 400
+@app.route('/nuevo_bloque', methods=['POST'])
+def agregar_bloque_r():
+    datos = request.get_json()
+    nuevo_bloque = datos['bloque']
+    blockchain.append(nuevo_bloque)  # Valida el bloque antes de agregarlo
+    guardar_blockchain(blockchain)
+    return "Bloque agregado", 200
 
-    # Crear y añadir un nuevo bloque
-    nuevo_bloque = blockchain.add_block(prueba, hash_anterior)
+# Función para iniciar el servidor del nodo
+def iniciar_servidor():
+    app.run(port=5000)
 
-    response = {
-        "mensaje": "Nuevo bloque generado con éxito",
-        "bloque": nuevo_bloque
-    }
-    return jsonify(response)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    iniciar_servidor()
