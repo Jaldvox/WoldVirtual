@@ -1,13 +1,15 @@
+# BK_ST2_3.py - Funciones para la sincronización entre nodos
+
 import requests
 import json
 from BK_ST2_1 import cargar_blockchain, guardar_blockchain
 
-# Función para obtener la lista de nodos
+# Función para obtener la lista de nodos desde la configuración
 def obtener_nodos():
     with open("config.json", "r") as archivo:
         return json.load(archivo)["nodos"]
 
-# Función para sincronizar la blockchain
+# Función para sincronizar la blockchain con otros nodos
 def sincronizar_blockchain():
     nodos = obtener_nodos()
     for nodo in nodos:
@@ -25,4 +27,4 @@ def sincronizar_blockchain():
         except:
             continue
 
-    return cargar_blockchain()  # Si no se pudo sincronizar, se devuelve la local
+    return cargar_blockchain()  # Si no se pudo sincronizar, se devuelve la blockchain local.
