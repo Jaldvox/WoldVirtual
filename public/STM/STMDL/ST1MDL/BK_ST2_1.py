@@ -16,7 +16,7 @@ def crear_bloque_genesis():
         "timestamp": str(datetime.datetime.now()),
         "data": "Bloque génesis",
         "prev_hash": "0",
-        "hash": "c3edb8a9509bee926eccb4edc957f0304a122585bab876e551c1ef6999031575"
+        "hash": " "
     }
 
 # Función para guardar la blockchain en un archivo
