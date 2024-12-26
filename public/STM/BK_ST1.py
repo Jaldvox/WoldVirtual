@@ -4,7 +4,7 @@ from STMDL.BK_ST4 import manejar_accion
 from STMDL.BK_Usuarios import inicializar_usuarios
 from STMDL.BK_ST5BKCH  import add_block, display_blockchain
 
-# Recuperación de datos que funcionan #
+
 
 if __name__ == '__main__':
     # Datos de prueba para la blockchain
