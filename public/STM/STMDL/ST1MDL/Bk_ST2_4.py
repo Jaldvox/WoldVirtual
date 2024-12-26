@@ -17,9 +17,12 @@ def obtener_blockchain():
 def agregar_bloque_r():
     datos = request.get_json()
     nuevo_bloque = datos['bloque']
-    blockchain.append(nuevo_bloque)  # Valida el bloque antes de agregarlo
-    agregar_bloque(blockchain, nuevo_bloque['data'])
-    return "Bloque agregado", 200
+    if verificar_blockchain(blockchain + [nuevo_bloque]):
+        blockchain.append(nuevo_bloque)
+        agregar_bloque(blockchain, nuevo_bloque['data'])
+        return "Bloque agregado", 200
+    else:
+        return "Bloque inválido", 400
 
 # Función para iniciar el servidor del nodo
 def iniciar_servidor():

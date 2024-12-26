@@ -12,19 +12,17 @@ def obtener_nodos():
 # Función para sincronizar la blockchain con otros nodos
 def sincronizar_blockchain():
     nodos = obtener_nodos()
+    blockchain_local = cargar_blockchain()
     for nodo in nodos:
         try:
             response = requests.get(f"{nodo}/blockchain")
             if response.status_code == 200:
                 blockchain_remota = response.json()
-                blockchain_local = cargar_blockchain()
-
-                # Comparar y actualizar la blockchain si es necesario
-                if len(blockchain_remota) > len(blockchain_local):
-                    guardar_blockchain(blockchain_remota)
-                    return blockchain_remota
-                return blockchain_local
+                if len(blockchain_remota) > len(blockchain_local) and verificar_blockchain(blockchain_remota):
+                    blockchain_local = blockchain_remota
+                    guardar_blockchain(blockchain_local)
         except:
             continue
+    return blockchain_local
 
     return cargar_blockchain()  # Si no se pudo sincronizar, se devuelve la blockchain local.

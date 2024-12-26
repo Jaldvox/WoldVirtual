@@ -17,8 +17,11 @@ def agregar_bloque(blockchain, datos):
             "prev_hash": ultimo_bloque["hash"]
         })
     }
-    blockchain.append(nuevo_bloque)
-    guardar_blockchain(blockchain)
+    if verificar_blockchain(blockchain + [nuevo_bloque]):
+        blockchain.append(nuevo_bloque)
+        guardar_blockchain(blockchain)
+    else:
+        raise ValueError("El bloque no es válido y no se puede agregar.")
 
 # Función para verificar si la blockchain es válida
 def verificar_blockchain(blockchain):
