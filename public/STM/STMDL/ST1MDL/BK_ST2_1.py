@@ -1,37 +1,33 @@
-from flask import Flask, request, jsonify, render_template
-from ST1MDL.blockchain import Blockchain
+# BK_ST2_1.py - Funciones relacionadas con la blockchain
 
-# Inicializar Flask y la blockchain
-app = Flask(__name__)
-blockchain = Blockchain()
+import json
+import hashlib
+import datetime
 
-@app.route('/')
-def index():
-    """
-    Página principal: carga el HTML desde una plantilla.
-    """
-    return render_template('index.html')
+# Función para calcular el hash de un bloque
+def calcular_hash(bloque):
+    bloque_str = f"{bloque['index']}{bloque['timestamp']}{bloque['data']}{bloque['prev_hash']}"
+    return hashlib.sha256(bloque_str.encode()).hexdigest()
 
-@app.route('/nuevo_bloque', methods=['GET'])
-def nuevo_bloque():
-    """
-    Genera un nuevo bloque en la blockchain basado en los datos recibidos por parámetros.
-    """
-    prueba = request.args.get('prueba')
-    hash_anterior = request.args.get('hash_anterior')
-
-    # Validar los parámetros requeridos
-    if not prueba or not hash_anterior:
-        return jsonify({"error": "Parámetros 'prueba' y 'hash_anterior' son requeridos"}), 400
-
-    # Crear y añadir un nuevo bloque
-    nuevo_bloque = blockchain.add_block(prueba, hash_anterior)
-
-    response = {
-        "mensaje": "Nuevo bloque generado con éxito",
-        "bloque": nuevo_bloque
+# Función para crear el bloque génesis
+def crear_bloque_genesis():
+    return {
+        "index": 0,
+        "timestamp": str(datetime.datetime.now()),
+        "data": "Bloque génesis",
+        "prev_hash": "0",
+        "hash": " "
     }
-    return jsonify(response)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Función para guardar la blockchain en un archivo
+def guardar_blockchain(blockchain, archivo="blockchain.json"):
+    with open(archivo, "w") as f:
+        json.dump(blockchain, f)
+
+# Función para cargar la blockchain desde un archivo
+def cargar_blockchain(archivo="blockchain.json"):
+    try:
+        with open(archivo, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return [crear_bloque_genesis()]  # Si no existe, crea el bloque génesis.

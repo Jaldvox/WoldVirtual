@@ -1,40 +1,26 @@
-import hashlib
-import time
+# BK_ST2_4.py - Funciones para la configuración y arranque del servidor del nodo
 
-class Block:
-    def __init__(self, index, previous_hash, timestamp, data, hash):
-        self.index = index
-        self.previous_hash = previous_hash
-        self.timestamp = timestamp
-        self.data = data
-        self.hash = hash
+from flask import Flask, jsonify, request
+from BK_ST2_1 import cargar_blockchain, agregar_bloque
+from BK_ST2_3 import sincronizar_blockchain
 
-def calculate_hash(index, previous_hash, timestamp, data):
-    return hashlib.sha256(f"{index}{previous_hash}{timestamp}{data}".encode()).hexdigest()
+app = Flask(__name__)
 
-def create_genesis_block():
-    return Block(0, "0", int(time.time()), "Genesis Block", calculate_hash(0, "0", int(time.time()), "Genesis Block"))
+# Cargar la blockchain localmente
+blockchain = cargar_blockchain()
 
-def create_new_block(previous_block, data):
-    index = previous_block.index + 1
-    timestamp = int(time.time())
-    hash = calculate_hash(index, previous_block.hash, timestamp, data)
-    return Block(index, previous_block.hash, timestamp, data, hash)
+@app.route('/blockchain', methods=['GET'])
+def obtener_blockchain():
+    return jsonify(blockchain), 200
 
-# Inicializar la blockchain con el bloque génesis
-blockchain = [create_genesis_block()]
+@app.route('/nuevo_bloque', methods=['POST'])
+def agregar_bloque_r():
+    datos = request.get_json()
+    nuevo_bloque = datos['bloque']
+    blockchain.append(nuevo_bloque)  # Valida el bloque antes de agregarlo
+    agregar_bloque(blockchain, nuevo_bloque['data'])
+    return "Bloque agregado", 200
 
-def add_block(data):
-    """
-    Añade un nuevo bloque con los datos proporcionados.
-    """
-    previous_block = blockchain[-1]
-    new_block = create_new_block(previous_block, data)
-    blockchain.append(new_block)
-
-def display_blockchain():
-    """
-    Muestra todos los bloques en la blockchain.
-    """
-    for block in blockchain:
-        print(f"Bloque {block.index} - Hash: {block.hash}")
+# Función para iniciar el servidor del nodo
+def iniciar_servidor():
+    app.run(port=5000)
