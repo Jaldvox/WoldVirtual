@@ -1,6 +1,6 @@
 import os
-from .IABK1 import Blockchain,
-from .IABK2 import SimpleAI,
+from IA_BLCH.IABK1 import Blockchain
+from IA_BLCH.IABK2 import SimpleAI
 
 class System:
     def __init__(self):

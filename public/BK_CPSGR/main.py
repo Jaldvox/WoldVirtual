@@ -1,9 +1,9 @@
-from usuarios.usuarios  import usuarios, registrar_usuario, verificar_credenciales, manejar_accion,
-from recursos.recursos  import RecursosUsuario, MonitoreoRecursos
-from blockchain.Blockchain import Blockchain,
-from database.database  import conectar_base_datos,
-from compresion.compresion import comprimir_y_guardar_datos, cargar_y_descomprimir_datos,
-from servidor.servidor   import app, socketio,
+from BK_CPSGR.usuarios   import usuarios, registrar_usuario, verificar_credenciales, manejar_accion
+from BK_CPSGR.recursos   import RecursosUsuario, MonitoreoRecursos
+from BK_CPSGR.blockchain import Blockchain,
+from BK_CPSGR.database   import conectar_base_datos,
+from BK_CPSGR.compresion import comprimir_y_guardar_datos, cargar_y_descomprimir_datos
+from BK_CPSGR.servidor   import app, socketio
 
 def main():
     # Inicializar recursos
