@@ -1,5 +1,5 @@
 # BK_ST2_4.py - Funciones para la configuración y arranque del servidor del nodo
-
+""""
 from flask import Flask, jsonify, request
 from BK_ST2_1 import cargar_blockchain, agregar_bloque
 from BK_ST2_3 import sincronizar_blockchain

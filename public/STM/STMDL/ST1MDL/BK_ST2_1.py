@@ -1,5 +1,5 @@
 # BK_ST2_1.py - Funciones relacionadas con la blockchain
-
+""""
 import json
 import hashlib
 import datetime

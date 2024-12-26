@@ -1,5 +1,5 @@
 # BK_ST2_2.py - Funciones para la creación y validación de bloques
-
+""""
 from BK_ST2_1 import calcular_hash, guardar_blockchain, cargar_blockchain
 
 # Función para agregar un nuevo bloque a la cadena

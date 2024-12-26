@@ -1,5 +1,5 @@
 # BK_ST2_3.py - Funciones para la sincronización entre nodos
-
+""""
 import requests
 import json
 from BK_ST2_1 import cargar_blockchain, guardar_blockchain
