@@ -1,3 +1,4 @@
+
 import hashlib
 from STMDL.BK_Usuarios import usuarios
 from BK_ST2_2 import agregar_bloque,          Import "BK_ST2_1"
@@ -23,25 +24,13 @@ def registrar_usuario(username, password):
 
 # Función para iniciar la red de nodos
 def iniciar_red():
-    
-    Esta función se encarga de iniciar el nodo y sincronizarlo con otros nodos.
-    Primero sincroniza la blockchain y luego inicia el servidor.
-    
     print("Iniciando la sincronización de la blockchain con otros nodos...")
-    
-    # Sincronizar la blockchain con otros nodos
     blockchain = sincronizar_blockchain()
-    
-    # Verificar si la blockchain local está vacía o solo tiene el bloque génesis
-    if len(blockchain) == 1:  # Solo contiene el bloque génesis
+    if len(blockchain) == 1:
         print("Blockchain vacía. Creando el bloque génesis...")
-        blockchain = [crear_bloque_genesis()]  # Crear el bloque génesis si no existe
-    
-    # Guardar la blockchain sincronizada
+        blockchain = [crear_bloque_genesis()]
     guardar_blockchain(blockchain)
     print(f"Blockchain sincronizada y guardada. Total de bloques: {len(blockchain)}")
-
-    # Iniciar el servidor del nodo
     print("Iniciando el servidor del nodo...")
     iniciar_servidor()
 
