@@ -1,3 +1,5 @@
+# Refactorizar en módulos #
+
 """
 # bloque central de la plataforma Notas #
 
