@@ -1,3 +1,30 @@
+# <<<<<<< WoldVirtual.0.0.1
+# Refactorizar en módulos más pequeños  
+# copia de recuperación.
+=======
+# <<<<<<< BK_CPSG
+# Refactorizar en módulos #
+# >>>>>>> WoldVirtual.0.0.1
+
+"""
+# bloque central de la plataforma Notas #
+
+#__version__ = "0.0.1"
+
+#class MyCode:
+    #def __init__(self):
+        #pass
+
+    #def run(self):
+        print(f"Ejecutando la versión: {__version__}")
+
+#if __name__ == "__main__":
+    #my_code_instance = MyCode()
+    #my_code_instance.run()
+
+# import tkinter as tk
+# =======
+# >>>>>>> WoldVirtual.0.0.1
 import hashlib
 import time
 import json

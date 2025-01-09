@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template_string
 import hashlib
 import time
 
@@ -34,9 +34,39 @@ previous_block = blockchain[0]
 # Crear la aplicación Flask
 app = Flask(__name__)
 
-# Endpoint para obtener toda la blockchain
-@app.route('/blockchain', methods=['GET'])
-def get_blockchain():
+# Página web de ejemplo
+HTML_TEMPLATE = """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Demo</title>
+</head>
+<body>
+    <h1>Bienvenido a la Blockchain</h1>
+    <p>Esta es una demo de una blockchain simple en Python.</p>
+    <form action="/add_block" method="post">
+        <label for="data">Datos del bloque:</label><br>
+        <input type="text" id="data" name="data"><br><br>
+        <input type="submit" value="Agregar bloque">
+    </form>
+    <h2>Blockchain Actual</h2>
+    <ul>
+    {% for block in blockchain %}
+        <li>
+            <strong>Índice:</strong> {{ block['index'] }} <br>
+            <strong>Hash:</strong> {{ block['hash'] }} <br>
+            <strong>Datos:</strong> {{ block['data'] }} <br>
+            <hr>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
+"""
+
+# Endpoint para la página principal
+@app.route('/')
+def home():
     chain_data = [
         {
             "index": block.index,
@@ -47,42 +77,20 @@ def get_blockchain():
         }
         for block in blockchain
     ]
-    return jsonify(chain_data)
+    return render_template_string(HTML_TEMPLATE, blockchain=chain_data)
 
-# Endpoint para agregar un nuevo bloque
+# Endpoint para agregar un nuevo bloque (formulario HTML)
 @app.route('/add_block', methods=['POST'])
-def add_block():
+def add_block_html():
     global previous_block
-    data = request.json.get('data')
+    data = request.form.get('data')
     if not data:
-        return jsonify({"error": "Faltan datos"}), 400
+        return "Faltan datos", 400
 
     new_block = create_new_block(previous_block, data)
     blockchain.append(new_block)
     previous_block = new_block
-    return jsonify({
-        "message": "Bloque agregado exitosamente",
-        "block": {
-            "index": new_block.index,
-            "previous_hash": new_block.previous_hash,
-            "timestamp": new_block.timestamp,
-            "data": new_block.data,
-            "hash": new_block.hash
-        }
-    }), 201
-
-# Endpoint para ver el bloque génesis
-@app.route('/genesis', methods=['GET'])
-def get_genesis_block():
-    genesis_block = blockchain[0]
-    return jsonify({
-        "index": genesis_block.index,
-        "previous_hash": genesis_block.previous_hash,
-        "timestamp": genesis_block.timestamp,
-        "data": genesis_block.data,
-        "hash": genesis_block.hash
-    })
+    return "<p>¡Bloque agregado exitosamente!</p><a href='/'>Regresar</a>"
 
 if __name__ == '__main__':
     app.run(debug=True)
-           
