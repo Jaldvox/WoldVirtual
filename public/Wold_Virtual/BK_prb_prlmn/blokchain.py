@@ -1,5 +1,10 @@
+# <<<<<<< WoldVirtual.0.0.1
+# Refactorizar en módulos más pequeños  
+# copia de recuperación.
+=======
 # <<<<<<< BK_CPSG
 # Refactorizar en módulos #
+# >>>>>>> WoldVirtual.0.0.1
 
 """
 # bloque central de la plataforma Notas #
