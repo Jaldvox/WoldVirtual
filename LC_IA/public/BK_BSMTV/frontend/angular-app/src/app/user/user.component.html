@@ -1,0 +1,26 @@
+<h1>Gestión de Usuarios</h1>
+<div class="user-management">
+    <h2>Lista de Usuarios</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    <button (click)="editUser(user.id)">Editar</button>
+                    <button (click)="deleteUser(user.id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="addUser()">Agregar Usuario</button>
+</div>
