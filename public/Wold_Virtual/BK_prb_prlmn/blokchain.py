@@ -1,3 +1,6 @@
+# Refactorizar en módulos más pequeños  
+# copia de recuperación.
+
 """
 # bloque central de la plataforma Notas #
 
