@@ -12,8 +12,8 @@ class Block:
     def calculate_hash(self):
         sha = hashlib.sha256()
         sha.update(str(self.timestamp).encode('utf-8') + 
-                   str(self.data).encode('utf-8') + 
-                   str(self.previous_hash).encode('utf-8'))
+                    str(self.data).encode('utf-8') + 
+                    str(self.previous_hash).encode('utf-8'))
         return sha.hexdigest()
 
 class Blockchain:
