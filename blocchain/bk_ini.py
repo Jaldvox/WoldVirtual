@@ -1,8 +1,10 @@
 import datetime
 import hashlib
-from flask import Flask, jsonify,
+# Removed unused imports Flask and jsonify
 
 class Blockchain:
+    DIFFICULTY_PREFIX = '0000'
+
     def __init__(self):
         self.chain = []
         self.create_block(proof=1, previous_hash='0')
@@ -20,11 +22,12 @@ class Blockchain:
     def mine_new_block(self, previous_proof):
         # Combines mine_block, proof_of_work and hash functions into one
         new_proof = 1
-        check_proof = lambda p: hashlib.sha256(str(p**2 - previous_proof**2).encode()).hexdigest()[:4] == '0000'
+        check_proof = lambda p: hashlib.sha256(str(p**2 - previous_proof**2).encode()).hexdigest()[:len(self.DIFFICULTY_PREFIX)] == self.DIFFICULTY_PREFIX
         
         while not check_proof(new_proof):
             new_proof += 1
-            
+        import json
+        new_hash = hashlib.sha256(json.dumps(previous_block, sort_keys=True).encode()).hexdigest()
         previous_block = self.chain[-1]
         new_hash = hashlib.sha256(str(previous_block).encode()).hexdigest()
         
