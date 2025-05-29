@@ -1,6 +1,6 @@
 import datetime
 import hashlib
-# Removed unused imports Flask and jsonify
+# Removed unused imports Flask and jsonify #
 
 class Blockchain:
     DIFFICULTY_PREFIX = '0000'
