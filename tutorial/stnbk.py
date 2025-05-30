@@ -120,5 +120,32 @@ def get_chain():
     - Importación datetime necesita corrección (actualmente 'datatime')
     - Se necesita validación adicional de la cadena.
     
+<<<<<<< Updated upstream
     """
+=======
+    
+Implementación básica de una blockchain en Python (Actualizado al 30/05/2025)
+Esta clase implementa una cadena de bloques con las siguientes funcionalidades:
+- Inicialización de la cadena con un bloque génesis
+- Dificultad de minado establecida con prefijo '000'
+- Gestión de transacciones pendientes
+- Prueba de trabajo (Proof of Work)
+Atributos:
+    DIFFICULTY_PREFIX (str): Prefijo de dificultad para el minado ('000')
+    chain (list): Lista que almacena los bloques de la cadena
+    pending_transactions (list): Lista de transacciones pendientes
+Métodos principales:
+    create_block: Crea un nuevo bloque con las transacciones pendientes
+    add_transaction: Agrega una nueva transacción a la lista de pendientes
+    get_previous_block: Obtiene el último bloque de la cadena
+    proof_of_work: Implementa el algoritmo de prueba de trabajo
+    hash: Genera el hash de un bloque
+Notas:
+    - Hay un error de duplicación en el método add_transaction
+    - El método proof_of_work tiene problemas de sintaxis y lógica
+    - Hay algunos errores de importación (datatime en lugar de datetime)
+    - Falta implementación de validación de la cadena.
+    
+"""
+>>>>>>> Stashed changes
     
