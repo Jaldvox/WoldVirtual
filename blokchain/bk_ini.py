@@ -15,10 +15,10 @@ El proceso de minado:
 1. Toma el bloque anterior y su prueba
 2. Busca una nueva prueba que genere un hash con el prefijo requerido
 3. Crea un nuevo bloque con:
-   - Índice incremental
-   - Marca de tiempo actual
-   - Nueva prueba calculada
-   - Hash del bloque anterior
+- Índice incremental
+- Marca de tiempo actual
+- Nueva prueba calculada
+- Hash del bloque anterior
 La cadena se inicializa con 3 bloques 
 por defecto, incluyendo el bloque génesis.
 
