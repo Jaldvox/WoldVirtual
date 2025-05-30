@@ -1,34 +1,59 @@
 import datetime
 import hashlib
-# Removed unused imports Flask and jsonify #
 
-class Blockchain:
-    DIFFICULTY_PREFIX = '0000'
+"""
+Implementación básica de una blockchain (cadena de bloques)
+Esta clase crea una cadena de bloques simple con las siguientes características:
+- Inicializa una cadena con un bloque génesis
+- Genera bloques adicionales mediante prueba de trabajo (PoW)
+- Utiliza SHA-256 para el hash de los bloques
+- Define una dificultad de minado con un prefijo de '000'
+Atributos:
+    DIFFICULTY_PREFIX (str): Prefijo de dificultad para el minado ('000')
+    chain (list): Lista de bloques que forman la cadena
+El proceso de minado:
+1. Toma el bloque anterior y su prueba
+2. Busca una nueva prueba que genere un hash con el prefijo requerido
+3. Crea un nuevo bloque con:
+   - Índice incremental
+   - Marca de tiempo actual
+   - Nueva prueba calculada
+   - Hash del bloque anterior
+La cadena se inicializa con 3 bloques 
+por defecto, incluyendo el bloque génesis.
 
+"""
+
+class blockchain:
+    
     def __init__(self):
+        self.DIFFICULTY_PREFIX = '000'
         self.chain = []
-        self.create_block(proof=1, previous_hash='0')
-
-    def create_block(self, proof, previous_hash):
-        block = {
-            'index': len(self.chain) + 1,
+        
+        # Initialize first block
+        self.chain.append({
+            'index': 1,
             'timestamp': str(datetime.datetime.now()),
-            'proof': proof,
-            'previous_hash': previous_hash
-        }
-        self.chain.append(block)
-        return block
-
-    def mine_new_block(self, previous_proof):
-        # Combines mine_block, proof_of_work and hash functions into one
-        new_proof = 1
-        check_proof = lambda p: hashlib.sha256(str(p**2 - previous_proof**2).encode()).hexdigest()[:len(self.DIFFICULTY_PREFIX)] == self.DIFFICULTY_PREFIX
+            'proof': 1,
+            'previous_hash': '0'
+        })
         
-        while not check_proof(new_proof):
-            new_proof += 1
+        # Mine subsequent blocks
+        while len(self.chain) < 3:  # Example: Create 3 blocks
+            prev_block = self.chain[-1]
+            prev_proof = prev_block['proof']
             
-        previous_block = self.chain[-1]
-        import json
-        new_hash = hashlib.sha256(json.dumps(previous_block, sort_keys=True).encode()).hexdigest()
-        
-        return self.create_block(proof=new_proof, previous_hash=new_hash)
+            new_proof = 1
+            # Mine new block
+            while hashlib.sha256(str(new_proof**2 - prev_proof**2).encode()).hexdigest()[:4] != self.DIFFICULTY_PREFIX:
+                new_proof += 1
+            
+            new_hash = hashlib.sha256(str(prev_block).encode()).hexdigest()
+            
+            # Add new block
+            self.chain.append({
+                'index': len(self.chain) + 1,
+                'timestamp': str(datetime.datetime.now()),
+                'proof': new_proof,
+                'previous_hash': new_hash
+            })
