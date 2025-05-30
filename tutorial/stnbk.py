@@ -66,6 +66,7 @@ class Blockchain:
     
     
     """
+    
 Implementación básica de una blockchain en Python (Actualizado al 30/05/2025)
 Esta clase implementa una cadena de bloques con las siguientes funcionalidades:
 - Inicialización de la cadena con un bloque génesis
