@@ -26,9 +26,9 @@ class Blockchain:
         
         while not check_proof(new_proof):
             new_proof += 1
+            
+        previous_block = self.chain[-1]
         import json
         new_hash = hashlib.sha256(json.dumps(previous_block, sort_keys=True).encode()).hexdigest()
-        previous_block = self.chain[-1]
-        new_hash = hashlib.sha256(str(previous_block).encode()).hexdigest()
         
         return self.create_block(proof=new_proof, previous_hash=new_hash)
