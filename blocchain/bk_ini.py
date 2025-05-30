@@ -3,7 +3,7 @@ import hashlib
 import json
 
 class Blockchain:
-    DIFFICULTY_PREFIX = '0000'
+    DIFFICULTY_PREFIX = '000'
 
     def __init__(self):
         self.chain = []
