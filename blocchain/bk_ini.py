@@ -1,34 +1,45 @@
 import datetime
 import hashlib
-# Removed unused imports Flask and jsonify #
+import json
 
 class Blockchain:
     DIFFICULTY_PREFIX = '0000'
 
     def __init__(self):
         self.chain = []
+        # Genesis block
         self.create_block(proof=1, previous_hash='0')
 
     def create_block(self, proof, previous_hash):
         block = {
             'index': len(self.chain) + 1,
-            'timestamp': str(datetime.datetime.now()),
+            'timestamp': datetime.datetime.now().isoformat(),
             'proof': proof,
             'previous_hash': previous_hash
         }
         self.chain.append(block)
         return block
 
-    def mine_new_block(self, previous_proof):
-        # Combines mine_block, proof_of_work and hash functions into one
+    @staticmethod
+    def hash(block):
+        """Devuelve el hash SHA-256 de un bloque."""
+        block_string = json.dumps(block, sort_keys=True).encode()
+        return hashlib.sha256(block_string).hexdigest()
+
+    def proof_of_work(self, previous_proof):
+        """Resuelve el problema de prueba de trabajo."""
         new_proof = 1
-        check_proof = lambda p: hashlib.sha256(str(p**2 - previous_proof**2).encode()).hexdigest()[:len(self.DIFFICULTY_PREFIX)] == self.DIFFICULTY_PREFIX
-        
-        while not check_proof(new_proof):
+        while True:
+            guess = f"{new_proof**2 - previous_proof**2}".encode()
+            guess_hash = hashlib.sha256(guess).hexdigest()
+            if guess_hash.startswith(self.DIFFICULTY_PREFIX):
+                return new_proof
             new_proof += 1
-        import json
-        new_hash = hashlib.sha256(json.dumps(previous_block, sort_keys=True).encode()).hexdigest()
+
+    def mine_new_block(self):
+        """Mina un nuevo bloque y lo añade a la cadena."""
         previous_block = self.chain[-1]
-        new_hash = hashlib.sha256(str(previous_block).encode()).hexdigest()
-        
-        return self.create_block(proof=new_proof, previous_hash=new_hash)
+        previous_proof = previous_block['proof']
+        proof = self.proof_of_work(previous_proof)
+        previous_hash = self.hash(previous_block)
+        return self.create_block(proof, previous_hash)
