@@ -23,7 +23,6 @@ La cadena se inicializa con 3 bloques
 por defecto, incluyendo el bloque génesis.
 
 """
-
 class blockchain:
     
     def __init__(self):
