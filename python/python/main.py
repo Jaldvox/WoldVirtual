@@ -304,9 +304,10 @@ def main() -> None:
     pass
 
 if __name__ == "__main__":
-    verify_all_modules()
-    
+    verify_all_modules()   
+
      """
+
     Estado del sistema al 1 de junio de 2025, 23:00 horas
 
     Sistema blockchain WoldVirtual operando a capacidad completa.
