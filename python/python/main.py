@@ -290,7 +290,8 @@ def verify_all_modules() -> None:
     verifier.verify_modules()
 
 def main() -> None:
-    """Main function to initialize and run the metaverse"""
+    
+    Main function to initialize and run the metaverse"""
     # metaverse = MetaverseCore()  # No se puede instanciar correctamente
     # if metaverse.initialize():
     #     logger.info("Metaverse initialized successfully!")
@@ -306,7 +307,7 @@ def main() -> None:
 if __name__ == "__main__":
     verify_all_modules()   
 
-     """
+"""
 
     Estado del sistema al 1 de junio de 2025, 23:00 horas
 
@@ -331,4 +332,4 @@ if __name__ == "__main__":
     Responsable de turno: Sistema Automatizado.,
     Fin del reporte.
     
-    """
+"""
