@@ -6,6 +6,8 @@ from bk_ini  import *
 from functools import wraps
 from typing import Callable, Any
 
+
+
 """
 Módulo de implementación simple de blockchain que maneja operaciones básicas de criptomonedas.
 Este módulo proporciona una clase Blockchain que implementa operaciones fundamentales
@@ -154,6 +156,23 @@ class BlockchainSimple:
         """Helper method to calculate block hash"""
         block_copy = {**block, 'hash': None}
         return hashlib.sha256(json.dumps(block_copy, sort_keys=True).encode()).hexdigest()
+
+    def validate_module_block(self) -> bool:
+        """Función para validar el bloque del módulo.
+        Esta es la función que se llamará desde main.py.
+        Puedes añadir aquí la lógica de validación específica.
+        """
+        # Ejemplo de lógica de validación:
+        # Por ahora, simplemente imprimiremos un mensaje y devolveremos True.
+        print(f"Validando bloque del módulo para BlockchainSimple: {self.__class__.__name__}")
+        # Aquí iría tu lógica de validación real.
+        # Por ejemplo, podrías verificar la integridad de la cadena o una firma específica.
+        is_valid = self.blockchain_manager('validate')
+        if is_valid:
+            print("La validación del módulo fue exitosa.")
+        else:
+            print("La validación del módulo falló.")
+        return is_valid
 """
 Este módulo proporciona una clase BlockchainSimple que implementa operaciones fundamentales
 Este módulo complementa al anterior (bk_ini) proporcionando una implementación más eficiente porque:
