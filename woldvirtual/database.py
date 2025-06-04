@@ -4,10 +4,13 @@ from psycopg2 import sql
 from blockchain import Blockchain
 
 def conectar_base_datos():
+    
     """
     Función para conectar a una base de datos PostgreSQL.
     Se mantiene para posible uso futuro con datos no relacionados con usuarios.
+    
     """
+    
     conexion = None
     try:
         # NOTA: Reemplaza estos datos con los de tu base de datos PostgreSQL real
@@ -27,6 +30,7 @@ def conectar_base_datos():
         #     for resultado in resultados:
         #         print(resultado)
         return conexion # Retornamos la conexión si es exitosa
+        
     except Exception as e:
         print(f"Error en la conexión a la base de datos PostgreSQL: {e}")
         return None # Retornamos None si falla la conexión
@@ -58,8 +62,9 @@ def cargar_datos_desde_blockchain(blockchain: Blockchain):
 
 # Puedes añadir otras funciones aquí para interactuar con la base de datos tradicional
 # o para procesar los datos cargados de la blockchain.
-import psycopg2
-from psycopg2 import sql
+
+# import psycopg2
+# from psycopg2 import sql
 
 def conectar_base_datos():
     conexion = None
@@ -81,4 +86,4 @@ def conectar_base_datos():
     finally:
         if conexion:
             conexion.close()
-            print("Conexión cerrada.")
+    print("Conexión cerrada.")
