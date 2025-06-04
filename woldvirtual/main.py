@@ -1,4 +1,49 @@
 # Importamos solo lo necesario para ejecutar el servidor
+"""
+Módulo principal de ejecución para la plataforma WoldVirtual.
+
+Este script sirve como punto de entrada para el sistema WoldVirtual, coordinando varios módulos
+y funcionalidades:
+
+Módulos coordinados:
+- usuarios: Maneja registro, autenticación y acciones de usuarios
+- recursos: Gestiona y monitorea recursos del sistema (CPU, ancho de banda)
+- blockchain: Implementa funcionalidad blockchain para transacciones seguras
+- database: Maneja conexiones y operaciones de base de datos
+- compresion: Gestiona compresión y descompresión de datos
+- servidor: Implementación del servidor web con soporte Socket.IO
+
+Funcionalidades principales:
+1. Gestión de Recursos del Sistema:
+    - Inicializa recursos de usuario con límites específicos de CPU y ancho de banda
+    - Monitorea uso de recursos
+
+2. Gestión de Usuarios:
+    - Maneja registro de usuarios
+    - Valida credenciales
+    - Procesa acciones de usuarios
+
+3. Gestión de Datos:
+    - Comprime y almacena datos de usuario
+    - Carga y descomprime datos almacenados
+    - Gestiona persistencia de datos
+
+4. Operaciones Blockchain:
+    - Inicializa blockchain
+    - Procesa y añade transacciones a bloques
+
+5. Servidor Web:
+    - Inicia servidor Flask con soporte Socket.IO
+    - Maneja peticiones web y comunicaciones en tiempo real
+
+El script utiliza bloques try-except para manejo de errores e incluye registro básico
+mediante declaraciones print para propósitos de desarrollo.
+
+Uso:
+    Ejecutar este script directamente para iniciar la plataforma WoldVirtual:
+    python main.py
+    
+"""
 from servidor import app, socketio
 
 def main():
