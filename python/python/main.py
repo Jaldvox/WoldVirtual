@@ -290,7 +290,8 @@ def verify_all_modules() -> None:
     verifier.verify_modules()
 
 def main() -> None:
-    """Main function to initialize and run the metaverse"""
+    
+    Main function to initialize and run the metaverse"""
     # metaverse = MetaverseCore()  # No se puede instanciar correctamente
     # if metaverse.initialize():
     #     logger.info("Metaverse initialized successfully!")
