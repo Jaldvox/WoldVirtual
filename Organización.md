@@ -156,5 +156,4 @@ metaverso_crypto_3d/
 - **Performance**: Carga lazy de módulos
 - **Seguridad**: Separación clara de responsabilidades
 - **Documentación**: Todo bien documentado
-- **Despliegue**: Fácil containerización y CI/CD
-````"
+- **Despliegue**: Fácil containerización y CI/CD.
