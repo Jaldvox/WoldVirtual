@@ -1,0 +1,52 @@
+import reflex as rx
+from state import State
+
+def header() -> rx.Component:
+    return rx.hstack(
+        rx.text("WoldVirtual", font_size="1.2em", color="black", font_weight="bold"),
+        rx.spacer(),
+        rx.text("Mapa del proyecto.", margin_left="0.5em", color="black", font_size="0.8em"),
+        rx.text("Libro blanco", margin_left="0.5em", color="black", font_size="0.8em"),
+        rx.text("Código abierto", margin_left="0.5em", color="black", font_size="0.8em"),
+        rx.button(
+            State.selected_network,
+            on_click=State.toggle_networks_menu,
+            bg="#343a40",
+            color="white",
+            margin_left="0.5em",
+            font_size="0.65em",
+            padding="0.3em 0.6em",
+            cursor="pointer",
+            border_radius="4px",
+        ),
+        rx.cond(
+            State.show_networks_menu,
+            rx.vstack(
+                rx.button("Binance Smart Chain", on_click=lambda: State.select_network("Binance Smart Chain"), width="100%", font_size="0.7em", padding="0.3em"),
+                rx.button("Ethereum", on_click=lambda: State.select_network("Ethereum"), width="100%", font_size="0.7em", padding="0.3em"),
+                rx.button("Polygon", on_click=lambda: State.select_network("Polygon"), width="100%", font_size="0.7em", padding="0.3em"),
+                rx.button("Avalanche", on_click=lambda: State.select_network("Avalanche"), width="100%", font_size="0.7em", padding="0.3em"),
+                rx.button("Arbitrum", on_click=lambda: State.select_network("Arbitrum"), width="100%", font_size="0.7em", padding="0.3em"),
+                rx.button("Solana", on_click=lambda: State.select_network("Solana"), width="100%", font_size="0.7em", padding="0.3em"),
+                position="absolute",
+                top="100%",
+                right="0",
+                background_color="white",
+                border="1px solid #ddd",
+                border_radius="4px",
+                box_shadow="0 2px 8px rgba(0,0,0,0.1)",
+                z_index="1000",
+                width="160px",
+                align_items="stretch",
+                spacing="1",
+            ),
+            None,
+        ),
+        width="100%",
+        height="50px",
+        background_color="#FFD700",
+        align_items="center",
+        padding_x="4",
+        z_index="100",
+        position="relative",
+    ) 

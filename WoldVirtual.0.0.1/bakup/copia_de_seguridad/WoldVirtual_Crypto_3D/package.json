@@ -1,0 +1,20 @@
+{
+  "name": "woldvirtual-crypto-3d",
+  "version": "0.0.9",
+  "description": "Metaverso Cripto 3D Descentralizado con Reflex",
+  "scripts": {
+    "dev": "reflex run",
+    "build": "reflex export",
+    "test": "pytest"
+  },
+  "dependencies": {
+    "three": "^0.158.0",
+    "@react-three/fiber": "^8.15.0",
+    "@react-three/drei": "^9.88.0",
+    "ethers": "^6.7.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.158.0",
+    "typescript": "^5.2.0"
+  }
+} 
