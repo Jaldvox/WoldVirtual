@@ -1,0 +1,119 @@
+2025-06-19 00:16:38,989 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:16:38,993 - __main__ - INFO - \U0001f527 Inicializando todos los módulos...
+2025-06-19 00:16:38,993 - __main__ - INFO - \U0001f50d Verificando dependencias...
+2025-06-19 00:16:38,993 - __main__ - INFO - \u2705 reflex
+2025-06-19 00:16:40,357 - __main__ - INFO - \u2705 web3
+2025-06-19 00:16:40,357 - __main__ - INFO - \u2705 numpy
+2025-06-19 00:16:40,358 - __main__ - ERROR - \u274c pillow - FALTANTE
+2025-06-19 00:16:40,714 - __main__ - INFO - \u2705 fastapi
+2025-06-19 00:16:40,714 - __main__ - INFO - \u2705 sqlalchemy
+2025-06-19 00:16:40,715 - __main__ - INFO - \u2705 pydantic
+2025-06-19 00:16:40,775 - __main__ - INFO - \u2705 uvicorn
+2025-06-19 00:16:40,775 - __main__ - ERROR - Dependencias faltantes: ['pillow']
+2025-06-19 00:16:40,775 - __main__ - INFO - Ejecuta: pip install -r requirements.txt
+2025-06-19 00:16:40,775 - __main__ - ERROR - \u274c Failed to initialize modules
+2025-06-19 00:16:40,775 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:16:40,775 - __main__ - INFO - \u2705 Cleanup completed
+2025-06-19 00:17:38,833 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:17:38,836 - __main__ - INFO - \U0001f527 Inicializando todos los módulos...
+2025-06-19 00:17:38,836 - __main__ - INFO - \U0001f50d Verificando dependencias...
+2025-06-19 00:17:38,836 - __main__ - INFO - \u2705 reflex
+2025-06-19 00:17:41,059 - __main__ - INFO - \u2705 web3
+2025-06-19 00:17:41,059 - __main__ - INFO - \u2705 numpy
+2025-06-19 00:17:41,060 - __main__ - ERROR - \u274c pillow - FALTANTE
+2025-06-19 00:17:41,773 - __main__ - INFO - \u2705 fastapi
+2025-06-19 00:17:41,773 - __main__ - INFO - \u2705 sqlalchemy
+2025-06-19 00:17:41,773 - __main__ - INFO - \u2705 pydantic
+2025-06-19 00:17:41,860 - __main__ - INFO - \u2705 uvicorn
+2025-06-19 00:17:41,860 - __main__ - ERROR - Dependencias faltantes: ['pillow']
+2025-06-19 00:17:41,861 - __main__ - INFO - Ejecuta: pip install -r requirements.txt
+2025-06-19 00:17:41,861 - __main__ - ERROR - \u274c Failed to initialize modules
+2025-06-19 00:17:41,861 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:17:41,861 - __main__ - INFO - \u2705 Cleanup completed
+2025-06-19 00:18:02,293 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:18:02,299 - __main__ - INFO - \U0001f527 Inicializando todos los módulos...
+2025-06-19 00:18:02,299 - __main__ - INFO - \U0001f50d Verificando dependencias...
+2025-06-19 00:18:02,299 - __main__ - INFO - \u2705 reflex
+2025-06-19 00:18:03,802 - __main__ - INFO - \u2705 web3
+2025-06-19 00:18:03,802 - __main__ - INFO - \u2705 numpy
+2025-06-19 00:18:03,803 - __main__ - ERROR - \u274c pillow - FALTANTE
+2025-06-19 00:18:04,103 - __main__ - INFO - \u2705 fastapi
+2025-06-19 00:18:04,103 - __main__ - INFO - \u2705 sqlalchemy
+2025-06-19 00:18:04,104 - __main__ - INFO - \u2705 pydantic
+2025-06-19 00:18:04,143 - __main__ - INFO - \u2705 uvicorn
+2025-06-19 00:18:04,143 - __main__ - ERROR - Dependencias faltantes: ['pillow']
+2025-06-19 00:18:04,143 - __main__ - INFO - Ejecuta: pip install -r requirements.txt
+2025-06-19 00:18:04,143 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:18:04,143 - __main__ - INFO - \u2705 Cleanup completed
+2025-06-19 00:18:26,824 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:18:26,827 - __main__ - INFO - \U0001f50d Verificando dependencias...
+2025-06-19 00:18:26,827 - __main__ - INFO - \u2705 reflex
+2025-06-19 00:18:28,193 - __main__ - INFO - \u2705 web3
+2025-06-19 00:18:28,193 - __main__ - INFO - \u2705 numpy
+2025-06-19 00:18:28,194 - __main__ - ERROR - \u274c pillow - FALTANTE
+2025-06-19 00:18:28,485 - __main__ - INFO - \u2705 fastapi
+2025-06-19 00:18:28,485 - __main__ - INFO - \u2705 sqlalchemy
+2025-06-19 00:18:28,486 - __main__ - INFO - \u2705 pydantic
+2025-06-19 00:18:28,526 - __main__ - INFO - \u2705 uvicorn
+2025-06-19 00:18:28,526 - __main__ - ERROR - Dependencias faltantes: ['pillow']
+2025-06-19 00:18:28,526 - __main__ - INFO - Ejecuta: pip install -r requirements.txt
+2025-06-19 00:18:28,526 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:18:28,526 - __main__ - INFO - \u2705 Cleanup completed
+2025-06-19 00:18:50,770 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:18:52,578 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:18:52,578 - __main__ - INFO - \u2705 Cleanup completed
+2025-06-19 00:19:13,165 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:19:14,999 - __main__ - INFO - \U0001f5c4\ufe0f Inicializando base de datos...
+2025-06-19 00:19:14,999 - __main__ - ERROR - \u274c Error inicializando base de datos: 'Database' object has no attribute 'create_tables'
+2025-06-19 00:19:15,002 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:19:15,002 - __main__ - ERROR - \u274c Error during cleanup: 'Database' object has no attribute 'close'
+2025-06-19 00:19:37,239 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:19:39,026 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:19:39,027 - __main__ - ERROR - \u274c Error during cleanup: 'Database' object has no attribute 'close'
+2025-06-19 00:19:58,331 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:20:00,617 - __main__ - INFO - \U0001f517 Inicializando Web3...
+2025-06-19 00:20:00,618 - __main__ - ERROR - \u274c Error inicializando Web3: Web3Manager() takes no arguments
+2025-06-19 00:20:00,623 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:20:00,623 - __main__ - INFO - \u2705 Cleanup completed
+2025-06-19 00:20:19,570 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:20:21,305 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:20:21,305 - __main__ - INFO - \u2705 Cleanup completed
+2025-06-19 00:20:45,329 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:20:47,034 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:20:47,034 - __main__ - INFO - \u2705 Cleanup completed
+2025-06-19 00:21:07,918 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:21:09,651 - __main__ - INFO - \U0001f3a8 Inicializando gestores de assets...
+2025-06-19 00:21:09,659 - __main__ - ERROR - \u274c Error inicializando assets: name 'AudioManager' is not defined
+2025-06-19 00:21:09,660 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:21:09,660 - __main__ - ERROR - \u274c Error during cleanup: 'Web3Manager' object has no attribute 'w3'
+2025-06-19 00:21:31,107 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:21:32,798 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:21:32,798 - __main__ - ERROR - \u274c Error during cleanup: 'Web3Manager' object has no attribute 'w3'
+2025-06-19 00:21:51,665 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:21:53,490 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:21:53,491 - __main__ - ERROR - \u274c Error during cleanup: 'Web3Manager' object has no attribute 'w3'
+2025-06-19 00:22:15,911 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:22:17,662 - __main__ - INFO - \U0001f310 Creando aplicación Reflex...
+2025-06-19 00:22:17,880 - __main__ - ERROR - \u274c Error creando aplicación Reflex: App.__init__() got an unexpected keyword argument 'state'. Did you mean '_state'?
+2025-06-19 00:22:17,881 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:22:17,881 - __main__ - ERROR - \u274c Error during cleanup: 'Web3Manager' object has no attribute 'w3'
+2025-06-19 00:22:39,873 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:22:41,755 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:22:41,756 - __main__ - ERROR - \u274c Error during cleanup: 'Web3Manager' object has no attribute 'w3'
+2025-06-19 00:22:59,744 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:23:02,236 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:23:02,236 - __main__ - ERROR - \u274c Error during cleanup: 'Web3Manager' object has no attribute 'w3'
+2025-06-19 00:23:28,399 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:23:30,306 - __main__ - INFO - \U0001f680 Iniciando servidor Reflex...
+2025-06-19 00:23:30,306 - __main__ - ERROR - \u274c Error iniciando servidor Reflex: 'App' object has no attribute 'compile'
+2025-06-19 00:23:30,309 - __main__ - INFO - \U0001f9f9 Cleaning up resources...
+2025-06-19 00:23:30,309 - __main__ - ERROR - \u274c Error during cleanup: 'Web3Manager' object has no attribute 'w3'
+2025-06-19 00:23:51,386 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:23:53,452 - __main__ - INFO - \U0001f680 Iniciando servidor Reflex...
+2025-06-19 00:23:53,452 - __main__ - ERROR - \u274c Error iniciando servidor Reflex: 'App' object has no attribute 'compile'
+2025-06-19 00:26:36,632 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:26:38,688 - __main__ - INFO - \U0001f680 Iniciando servidor Reflex...
+2025-06-19 00:26:38,688 - __main__ - ERROR - \u274c Error iniciando servidor Reflex: 'App' object has no attribute 'compile'
+2025-06-19 00:27:58,783 - __main__ - INFO - \U0001f680 WoldVirtual Crypto 3D - Botón de encendido inicializado
+2025-06-19 00:28:00,774 - __main__ - INFO - \U0001f680 Iniciando servidor Reflex...
+2025-06-19 00:28:00,775 - __main__ - ERROR - \u274c Error iniciando servidor Reflex: 'App' object has no attribute 'compile'

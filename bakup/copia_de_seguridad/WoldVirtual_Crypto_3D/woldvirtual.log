@@ -1,0 +1,2 @@
+2025-06-19 00:15:49,059 - __main__ - ERROR - Dependencias faltantes: ['numpy', 'pillow']
+2025-06-19 00:15:49,060 - __main__ - INFO - Ejecuta: pip install -r requirements.txt
