@@ -171,7 +171,7 @@ Damos la bienvenida a contribuciones para mejorar Wold Virtual. Por favor, sigue
 
 Este es un proyecto de código abierto. Si encuentras útil Wold Virtual, considera patrocinarlo:
 
-[![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)]([https://www.paypal.com/paypalme/Chicook?country.x=ES&locale.x=es_ES](https://www.paypal.com/donate/?hosted_button_id=L4D4P3V9UH3EQ))
+[![PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)]([[https://www.paypal.com/paypalme/Chicook?country.x=ES&locale.x=es_ES](https://www.paypal.com/donate/?hosted_button_id=L4D4P3V9UH3EQ)](https://www.paypal.com/donate/?hosted_button_id=L4D4P3V9UH3EQ))
 
 ## 📄 Licencia
 
