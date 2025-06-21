@@ -566,10 +566,213 @@ Este proyecto está en desarrollo activo. Para contribuir:
 4. **Push** a la rama: `git push origin feature/nueva-funcionalidad`
 5. **Crear Pull Request**
 
-## 📞 Contacto
+// ...existing code...
 
-Para consultas sobre el proyecto:
+### 🚀 ¡Crea tu Issue Ahora!
+
+<div align="center">
+
+[![Reportar Bug](https://img.shields.io/badge/🐛_Reportar_Bug-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBUG%5D+)
+[![Solicitar Funcionalidad](https://img.shields.io/badge/✨_Nueva_Funcionalidad-4ECDC4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=%5BFEATURE%5D+)
+[![Pregunta](https://img.shields.io/badge/❓_Hacer_Pregunta-45B7D1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=question&template=question.md&title=%5BPREGUNTA%5D+)
+[![Documentación](https://img.shields.io/badge/📖_Mejorar_Docs-96CEB4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=documentation&template=documentation.md&title=%5BDOCS%5D+)
+
+### 🔥 Issue Rápido
+[![Crear Issue](https://img.shields.io/badge/🚀_Crear_Issue_Personalizado-FF9F43?style=for-the-badge&logo=github&logoColor=white&labelColor=2C3E50)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/issues/new)
+
+</div>
+
+### 🔗 Enlaces de Colaboración
+
+<div align="center">
+
+| 🎯 **Actividad** | 🔗 **Enlace** | 📝 **Descripción** |
+|------------------|---------------|-------------------|
+| 📋 **Ver Issues** | [![Issues](https://img.shields.io/github/issues/tu-usuario/WoldVirtual_Crypto_3Dv1?style=flat-square&logo=github)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/issues) | Revisar issues existentes |
+| 💬 **Discusiones** | [![Discussions](https://img.shields.io/badge/Discussions-181717?style=flat-square&logo=github)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/discussions) | Participa en discusiones |
+| 📊 **Proyecto** | [![Project](https://img.shields.io/badge/Project_Board-0052CC?style=flat-square&logo=github)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/projects) | Ver progreso del desarrollo |
+| 🌟 **Star** | [![GitHub stars](https://img.shields.io/github/stars/tu-usuario/WoldVirtual_Crypto_3Dv1?style=social)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/stargazers) | ¡Dale una estrella al proyecto! |
+
+</div>
+
+### 📈 Estadísticas del Proyecto
+
+<div align="center">
+
+![GitHub issues](https://img.shields.io/github/issues/tu-usuario/WoldVirtual_Crypto_3Dv1?style=flat-square&color=red)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/tu-usuario/WoldVirtual_Crypto_3Dv1?style=flat-square&color=green)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/tu-usuario/WoldVirtual_Crypto_3Dv1?style=flat-square&color=blue)
+![GitHub contributors](https://img.shields.io/github/contributors/tu-usuario/WoldVirtual_Crypto_3Dv1?style=flat-square&color=orange)
+
+</div>
+
+---
+
+**¡Tu participación hace que WoldVirtual Crypto 3D sea mejor cada día!** 🚀
+
+<div align="center">
+  
+### 🎉 ¡Únete a la Revolución del Metaverso!
+  
+*Cada issue, cada sugerencia, cada línea de código nos acerca más a crear el metaverso del futuro.*
+
+[![Contribuir Ahora](https://img.shields.io/badge/🚀_CONTRIBUIR_AHORA-success?style=for-the-badge&logo=rocket)](https://github.com/tu-usuario/WoldVirtual_Crypto_3Dv1/issues/new)
+
+</div>
+
+
+
+## 🐛 Issues y Colaboración
+
+### 📝 ¿Cómo Reportar Issues?
+
+Te invitamos a participar en el desarrollo de **WoldVirtual Crypto 3D** reportando bugs, sugiriendo mejoras o solicitando nuevas funcionalidades. Tu contribución es fundamental para el crecimiento del proyecto.
+
+#### 🔍 Tipos de Issues que Puedes Crear:
+
+**🐞 Bug Report (Reporte de Error)**
+- Errores en el código
+- Problemas de renderizado 3D
+- Fallos en la interfaz de usuario
+- Issues de compatibilidad
+
+**✨ Feature Request (Solicitud de Funcionalidad)**
+- Nuevas características para el metaverso
+- Mejoras en la experiencia de usuario
+- Integraciones con blockchain
+- Optimizaciones de rendimiento
+
+**📖 Documentation (Documentación)**
+- Mejoras en la documentación
+- Ejemplos de código
+- Tutoriales y guías
+- Traducciones
+
+**❓ Question (Pregunta)**
+- Dudas sobre implementación
+- Consultas técnicas
+- Ayuda con configuración
+- Guidance para desarrollo
+
+#### 📋 Cómo Crear un Issue:
+
+1. **Accede al Repositorio**: Ve a la página principal del proyecto en GitHub
+2. **Click en "Issues"**: Busca la pestaña "Issues" en la barra de navegación
+3. **"New Issue"**: Haz click en el botón verde "New issue"
+4. **Selecciona el Template**: Elige el tipo de issue que mejor se adapte
+5. **Completa la Información**:
+
+**Para Bug Reports:**
+```
+**Descripción del Bug**
+Describe claramente qué está fallando.
+
+**Pasos para Reproducir**
+1. Ve a '...'
+2. Haz click en '....'
+3. Desplázate hacia '....'
+4. Ver error
+
+**Comportamiento Esperado**
+Describe qué debería suceder normalmente.
+
+**Screenshots**
+Si es posible, añade capturas de pantalla.
+
+**Información del Sistema**
+- OS: [ej. Windows 11, macOS, Linux]
+- Navegador: [ej. Chrome 91, Firefox 89]
+- Versión Node.js: [ej. 16.14.0]
+- Versión del Proyecto: [ej. 0.0.1]
+
+**Contexto Adicional**
+Cualquier otra información relevante.
+```
+
+**Para Feature Requests:**
+```
+**¿Tu solicitud está relacionada con un problema?**
+Describe el problema: "Estoy siempre frustrado cuando [...]"
+
+**Describe la Solución que Te Gustaría**
+Una descripción clara de lo que quieres que suceda.
+
+**Describe Alternativas Consideradas**
+Otras soluciones o características que hayas considerado.
+
+**Beneficios para el Proyecto**
+¿Cómo mejorará esto la experiencia del usuario?
+
+**Implementación Técnica (Opcional)**
+Si tienes ideas sobre cómo implementarlo.
+```
+
+#### 🏷️ Etiquetas (Labels) Disponibles:
+
+- `bug` - Errores confirmados
+- `enhancement` - Mejoras y nuevas funcionalidades
+- `documentation` - Relacionado con documentación
+- `good first issue` - Ideal para nuevos contribuyentes
+- `help wanted` - Necesitamos ayuda de la comunidad
+- `priority: high` - Alta prioridad
+- `priority: medium` - Prioridad media
+- `priority: low` - Baja prioridad
+- `blockchain` - Relacionado con funcionalidades blockchain
+- `3d-graphics` - Temas de Three.js y renderizado 3D
+- `ui/ux` - Interfaz de usuario y experiencia
+- `performance` - Optimizaciones de rendimiento
+
+#### 💡 Tips para Issues Efectivos:
+
+1. **Título Descriptivo**: Usa títulos claros y específicos
+   - ✅ "Canvas 3D no renderiza en Safari 14+"
+   - ❌ "No funciona"
+
+2. **Información Completa**: Incluye toda la información relevante
+3. **Un Issue por Problema**: No mezcles múltiples problemas
+4. **Busca Duplicados**: Revisa si ya existe un issue similar
+5. **Sé Respetuoso**: Mantén un tono profesional y constructivo
+
+#### 🤝 Proceso de Triage:
+
+1. **Review Inicial**: El equipo revisará tu issue en 24-48 horas
+2. **Etiquetado**: Asignaremos las etiquetas apropiadas
+3. **Priorización**: Determinaremos la prioridad según el impacto
+4. **Asignación**: Si es factible, se asignará a un desarrollador
+5. **Updates**: Te mantendremos informado del progreso
+
+#### 🌟 Reconocimiento:
+
+Los contribuyentes activos serán reconocidos en:
+- 📜 **Contributors Hall of Fame** en el README
+- 🏆 **Release Notes** cuando se implemente su sugerencia
+- 💬 **Mentions** en redes sociales del proyecto
+- 🎯 **Priority Access** a nuevas funcionalidades beta
+
+### 📬 Contacto Directo
+
+Para consultas específicas o colaboraciones estratégicas:
 - **Email**: jaldvox@yahoo.es
+- **Asunto**: [WoldVirtual] Tu consulta aquí
+
+### 🔗 Enlaces Útiles
+
+- **GitHub Repository**: [Enlace al repositorio]
+- **Issues Page**: [Enlace a la página de issues]
+- **Discussions**: [Enlace a GitHub Discussions]
+- **Project Board**: [Enlace al tablero de proyecto]
+
+---
+
+**¡Tu participación hace que WoldVirtual Crypto 3D sea mejor cada día!** 🚀
+
+*Recuerda: No hay contribución demasiado pequeña. Desde reportar un typo hasta proponer arquitecturas complejas, toda ayuda es valiosa.*
+
+
+
+
+
+
 - **Proyecto**: WoldVirtual Crypto 3D
 - **Licencia**: MIT
 
