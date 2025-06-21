@@ -1,0 +1,16 @@
+import './style.css'
+import { setupCounter } from './counter.js'
+
+document.querySelector('#app').innerHTML = `
+  <div>
+    <h1>Wold Virtual 3D</h1>
+    <div class="card">
+      <button id="counter" type="button"></button>
+    </div>
+    <p class="read-the-docs">
+      Proyecto recuperado exitosamente
+    </p>
+  </div>
+`
+
+setupCounter(document.querySelector('#counter'))

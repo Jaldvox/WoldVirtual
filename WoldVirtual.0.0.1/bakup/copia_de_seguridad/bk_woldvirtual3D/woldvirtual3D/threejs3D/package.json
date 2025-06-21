@@ -1,0 +1,20 @@
+{
+  "name": "threejs-project",
+  "version": "1.0.0",
+  "description": "A simple Three.js project to demonstrate 3D rendering.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "live-server public",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "three": "^0.152.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
