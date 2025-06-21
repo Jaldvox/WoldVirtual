@@ -802,6 +802,13 @@ Los contribuyentes activos serán reconocidos en:
 
 </div>
 
+### 🔗 Enlaces Útiles
+
+- **GitHub Repository**: [Enlace al repositorio](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1.git)
+- **Issues Page**: [Enlace a la página de issues](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues)
+- **Discussions**: [Enlace a GitHub Discussions](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/discussions)
+- **Project Board**: [Enlace al tablero de proyecto](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/projects?query=is%3Aopen)
+
 ---
 
 ### 🎉 ¡Únete a la Revolución del Metaverso!
@@ -812,12 +819,21 @@ Los contribuyentes activos serán reconocidos en:
 
 **¡Tu participación hace que WoldVirtual Crypto 3D sea mejor cada día!** 🚀
 
+<<<<<<< HEAD
 </div>
+=======
+*Recuerda: No hay contribución demasiado pequeña. Desde reportar un typo hasta proponer arquitecturas complejas, toda ayuda es valiosa.*
+
+
+- **Proyecto**: WoldVirtual Crypto 3D
+- **Licencia**: MIT
+>>>>>>> ae8d45a8b5771c59a790d8cd5175169c5a4af571
 
 ---
 
 **Recuerda**: No hay contribución demasiado pequeña. Desde reportar un typo hasta proponer arquitecturas complejas, toda ayuda es valiosa para el crecimiento de nuestra comunidad.
 
+<<<<<<< HEAD
 ¡Tu participación hace que WoldVirtual Crypto 3D sea mejor cada día! 🚀
 
 Recuerda: No hay contribución demasiado pequeña. Desde reportar un typo hasta proponer arquitecturas complejas, toda ayuda es valiosa.
@@ -828,3 +844,7 @@ Esta primera fase establece los cimientos sólidos para el desarrollo del metave
 
 Fecha de documentación: Junio 21, 2025
 Versión: 0.0.1 - Primera Fase
+=======
+**Fecha de documentación**: Junio 21, 2025  
+**Versión**: 0.0.1 - Primera Fase
+>>>>>>> ae8d45a8b5771c59a790d8cd5175169c5a4af571
