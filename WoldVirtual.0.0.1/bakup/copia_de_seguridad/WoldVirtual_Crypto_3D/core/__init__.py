@@ -1,1 +1,0 @@
-# Paquete core para WoldVirtual Crypto 3D 
