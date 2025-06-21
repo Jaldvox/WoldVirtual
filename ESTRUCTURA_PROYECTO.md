@@ -4,6 +4,36 @@
 
 Este documento explica la estructura organizacional del proyecto Wold Virtual después de la reorganización realizada en junio de 2025.
 
+
+
+
+### **🎯 ¿Cómo Contribuir?**
+
+Tu participación es fundamental para el éxito de 
+**WoldVirtual Crypto 3D**. Ofrecemos múltiples 
+formas de contribución para desarrolladores de 
+todos los niveles.
+
+<div align="center">
+
+### **📋 Portal de Contribuciones**
+
+[![Reportar Bug](https://img.shields.io/badge/🐛%20Reportar%20Bug-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=bug%2Ctriage&template=bug_report.yml&title=%5BBUG%5D%3A+)
+[![Nueva Funcionalidad](https://img.shields.io/badge/✨%20Nueva%20Funcionalidad-4ECDC4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=enhancement%2Ctriage&template=feature_request.yml&title=%5BFEATURE%5D%3A+)
+[![Hacer Pregunta](https://img.shields.io/badge/❓%20Hacer%20Pregunta-45B7D1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=question%2Ctriage&template=question.yml&title=%5BPREGUNTA%5D%3A+)
+[![Mejorar Documentación](https://img.shields.io/badge/📖%20Mejorar%20Docs-96CEB4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=documentation%2Ctriage&template=documentation.yml&title=%5BDOCS%5D%3A+)
+
+### **🚀 Enlaces Directos**
+
+[![Issues Abiertos](https://img.shields.io/github/issues/Chicook/WoldVirtual_Crypto_3Dv1?style=flat-square&color=red&logo=github)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/Chicook/WoldVirtual_Crypto_3Dv1?style=flat-square&color=blue&logo=github)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/pulls)
+[![Discusiones](https://img.shields.io/badge/💬%20Discusiones-Join-purple?style=flat-square&logo=github)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/discussions)
+[![Proyecto](https://img.shields.io/badge/📊%20Proyecto-View-orange?style=flat-square&logo=github)](https://github.com/users/Chicook/projects)
+
+</div>
+
+### **📝 Templates para Issues**
+
 ## 🏗️ Arquitectura Principal
 
 ```
