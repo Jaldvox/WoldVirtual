@@ -181,4 +181,8 @@ Este proyecto está licenciado bajo la **Licencia MIT**. Consulta el archivo [LI
 
 **Wold Virtual** - Redefiniendo el futuro del metaverso blockchain 🚀
 
-*Última actualización: Junio 21, 2025* 
+*Última actualización: Junio 21, 2025*
+
+
+
+
