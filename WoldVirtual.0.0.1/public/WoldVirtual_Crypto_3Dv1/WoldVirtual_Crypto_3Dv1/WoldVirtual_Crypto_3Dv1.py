@@ -541,6 +541,15 @@ def create_app_theme() -> rx.theme:
 # INICIALIZACIÓN DE LA APLICACIÓN
 # ========================================================================================
 
+def integration_info() -> rx.Component:
+    """Información de integración con el componente React."""
+    return rx.vstack(
+        rx.text("🔗 Integración con React Component", font_size="1.2em"),
+        rx.text("• Backend: http://localhost:8000"),
+        rx.text("• Frontend React: http://localhost:5173"),
+        spacing="0.5em"
+    )
+
 # Crear la aplicación con configuración optimizada
 app = rx.App(theme=create_app_theme())
 

@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Usuario\Desktop\WoldVirtual_Crypto_3Dv1\public\WoldVirtual_Crypto_3Dv1\WoldVirtual_Crypto_3Dv1\venv
+set VIRTUAL_ENV=C:\Users\Usuario\Desktop\WoldVirtual_Crypto_3Dv1\WoldVirtual.0.0.1\public\WoldVirtual_Crypto_3Dv1\WoldVirtual_Crypto_3Dv1\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
