@@ -1,0 +1,11 @@
+{
+  "name": "woldvirtual-crypto-3d",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --port 3000",
+    "test": "echo \"No tests specified yet\"",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+  }
+}
