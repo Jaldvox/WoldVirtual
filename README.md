@@ -1,339 +1,220 @@
-# 🌌 MetaversoCryptoWoldVirtual - Backend Core
-### Motor Principal del Metaverso WoldVirtual Crypto 3D
+# 📁 Estructura del Proyecto Wold Virtual
+
+## 🎯 Visión General
+
+Este documento explica la estructura organizacional del proyecto Wold Virtual después de la reorganización realizada en junio de 2025.
+
+
+
+
+### **🎯 ¿Cómo Contribuir?**
+
+Tu participación es fundamental para el éxito de 
+**WoldVirtual Crypto 3D**. Ofrecemos múltiples 
+formas de contribución para desarrolladores de 
+todos los niveles.
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Reflex](https://img.shields.io/badge/Reflex-0.4+-FF4B4B?style=for-the-badge&logo=python&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0+-D71F00?style=for-the-badge&logo=python&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Backend_Core-success?style=for-the-badge)
+### **📋 Portal de Contribuciones**
+
+[![Reportar Bug](https://img.shields.io/badge/🐛%20Reportar%20Bug-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=bug%2Ctriage&template=bug_report.yml&title=%5BBUG%5D%3A+)
+[![Nueva Funcionalidad](https://img.shields.io/badge/✨%20Nueva%20Funcionalidad-4ECDC4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=enhancement%2Ctriage&template=feature_request.yml&title=%5BFEATURE%5D%3A+)
+[![Hacer Pregunta](https://img.shields.io/badge/❓%20Hacer%20Pregunta-45B7D1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=question%2Ctriage&template=question.yml&title=%5BPREGUNTA%5D%3A+)
+[![Mejorar Documentación](https://img.shields.io/badge/📖%20Mejorar%20Docs-96CEB4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues/new?assignees=&labels=documentation%2Ctriage&template=documentation.yml&title=%5BDOCS%5D%3A+)
+
+### **🚀 Enlaces Directos**
+
+[![Issues Abiertos](https://img.shields.io/github/issues/Chicook/WoldVirtual_Crypto_3Dv1?style=flat-square&color=red&logo=github)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/Chicook/WoldVirtual_Crypto_3Dv1?style=flat-square&color=blue&logo=github)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/pulls)
+[![Discusiones](https://img.shields.io/badge/💬%20Discusiones-Join-purple?style=flat-square&logo=github)](https://github.com/Chicook/WoldVirtual_Crypto_3Dv1/discussions)
+[![Proyecto](https://img.shields.io/badge/📊%20Proyecto-View-orange?style=flat-square&logo=github)](https://github.com/users/Chicook/projects)
 
 </div>
 
----
+### **📝 Templates para Issues**
 
-## 📍 Ubicación en el Ecosistema
-
-```
-WoldVirtual_Crypto_3Dv1/
-└── WoldVirtual.0.0.1/                    # Proyecto Python principal
-    └── public/
-        └── MetaversoCryptoWoldVirtual/   # ← ESTA SECCIÓN
-            └── rxconfig.py               # Configuración principal
-```
-
-**Esta es la configuración central del backend Python que potencia todo el metaverso.**
-
----
-
-## 🚀 Pasos de Instalación y Configuración
-
-### **Paso 1: Preparar el Entorno**
-
-```bash
-# 1. Navegar a la carpeta del proyecto backend
-cd WoldVirtual.0.0.1
-
-# 2. Crear entorno virtual (recomendado)
-python -m venv venv
-
-# 3. Activar entorno virtual
-# Windows:
-venv\Scripts\activate
-# Linux/Mac:
-source venv/bin/activate
-
-# 4. Verificar que Python esté disponible
-python --version
-# Debe mostrar Python 3.8 o superior
-```
-
-### **Paso 2: Instalar Dependencias**
-
-```bash
-# 1. Actualizar pip
-python -m pip install --upgrade pip
-
-# 2. Instalar Reflex (framework principal)
-pip install reflex
-
-# 3. Instalar dependencias adicionales para Web3 y blockchain
-pip install web3 sqlalchemy python-dotenv requests aiohttp
-
-# 4. Verificar instalación de Reflex
-reflex --version
-# Debe mostrar la versión instalada
-```
-
-### **Paso 3: Configurar Variables de Entorno (Opcional)**
-
-Crea un archivo `.env` en la carpeta `WoldVirtual.0.0.1/`:
-
-```bash
-# Archivo: WoldVirtual.0.0.1/.env
-ENVIRONMENT=development
-DEBUG_MODE=True
-API_HOST=localhost
-API_PORT=8000
-FRONTEND_PORT=3000
-DATABASE_URL=sqlite:///woldvirtual_crypto_3d.db
-```
-
-### **Paso 4: Verificar Configuración**
-
-```bash
-# 1. Navegar a la carpeta de configuración
-cd public/MetaversoCryptoWoldVirtual
-
-# 2. Verificar que rxconfig.py existe y es válido
-python -c "import rxconfig; print('✅ Configuración válida')"
-
-# 3. Verificar las variables de configuración
-python -c "from rxconfig import EnvironmentConfig; print(f'App: {EnvironmentConfig.APP_NAME}, Puerto: {EnvironmentConfig.API_PORT}')"
-```
-
-### **Paso 5: Inicializar Proyecto Reflex**
-
-```bash
-# 1. Volver a la carpeta raíz del backend
-cd ../../  # Desde MetaversoCryptoWoldVirtual hacia WoldVirtual.0.0.1
-
-# 2. Inicializar Reflex (esto detectará automáticamente rxconfig.py)
-reflex init
-
-# 3. Esto creará automáticamente:
-# - .web/ (archivos de compilación)
-# - requirements.txt (si no existe)
-# - Estructura de frontend compilada
-```
-
-### **Paso 6: Ejecutar el Backend**
-
-```bash
-# 1. Ejecutar servidor de desarrollo
-reflex run
-
-# 2. Si todo está correcto, verás:
-# ✅ Salida esperada:
-# ── Wold Virtual Crypto 3D ─────────────────────────
-# 🚀 WoldVirtual Crypto 3D v0.0.9
-# 🌍 Entorno: development
-# 🔧 Debug: True
-# 🌐 Frontend: http://localhost:3000
-# ⚙️  Backend: http://localhost:8000
-# 💾 Database: sqlite:///woldvirtual_crypto_3d.db
-# ══════════════════════════════════════════════════
-
-# 3. El navegador se abrirá automáticamente en:
-# http://localhost:3000
-```
-
----
-
-## 🔧 Configuración Avanzada
-
-### **📊 Variables de Entorno Disponibles**
-
-| **Variable** | **Valor por Defecto** | **Descripción** |
-|-------------|----------------------|-----------------|
-| `ENVIRONMENT` | `development` | Entorno de ejecución |
-| `DEBUG_MODE` | `True` | Modo debug activado |
-| `API_HOST` | `localhost` | Host del API |
-| `API_PORT` | `8000` | Puerto del backend |
-| `FRONTEND_PORT` | `3000` | Puerto del frontend |
-| `DATABASE_URL` | `sqlite:///woldvirtual_crypto_3d.db` | URL de base de datos |
-
-### **🌐 Puertos Configurados**
-
-- **Backend API**: http://localhost:8000
-- **Frontend Reflex**: http://localhost:3000
-- **React Component**: http://localhost:5173 (CORS habilitado)
-
-### **🎨 Colores del Tema Tailwind**
-
-```css
-/* Colores disponibles en la aplicación */
-primary: #00ff00    /* Verde neón principal */
-secondary: #0099ff  /* Azul cibernético */
-accent: #ff6b35     /* Naranja de acento */
-dark: #1a1a2e       /* Fondo oscuro */
-darker: #16213e     /* Más oscuro */
-```
-
----
-
-## 🛠️ Comandos Útiles
-
-### **Desarrollo**
-
-```bash
-# Iniciar servidor de desarrollo
-reflex run
-
-# Iniciar solo backend
-reflex run --backend-only
-
-# Iniciar solo frontend  
-reflex run --frontend-only
-
-# Limpiar archivos generados
-reflex clean
-```
-
-### **Debugging**
-
-```bash
-# Verificar configuración
-python -c "from public.MetaversoCryptoWoldVirtual.rxconfig import config; print(config.app_name)"
-
-# Ver todas las configuraciones
-python -c "from public.MetaversoCryptoWoldVirtual.rxconfig import *; print(f'CORS: {get_cors_origins()}')"
-
-# Test de conexión de base de datos
-python -c "from public.MetaversoCryptoWoldVirtual.rxconfig import EnvironmentConfig; print(f'DB: {EnvironmentConfig.DATABASE_URL}')"
-```
-
-### **Producción**
-
-```bash
-# Configurar para producción
-export ENVIRONMENT=production
-export DEBUG_MODE=False
-
-# Compilar para producción
-reflex export
-
-# Los archivos compilados estarán en ./export/
-```
-
----
-
-## 🔍 Solución de Problemas
-
-### **❌ Error: "No module named 'reflex'"**
-
-```bash
-# Solución: Reinstalar Reflex
-pip install --upgrade reflex
-```
-
-### **❌ Error: "rxconfig.py not found"**
-
-```bash
-# Verificar ubicación
-ls public/MetaversoCryptoWoldVirtual/rxconfig.py
-
-# Si no existe, crear uno básico:
-cd public/MetaversoCryptoWoldVirtual
-cat > rxconfig.py << 'EOF'
-import reflex as rx
-config = rx.Config(app_name="WoldVirtual_Crypto_3D")
-EOF
-```
-
-### **❌ Error: "Port already in use"**
-
-```bash
-# Cambiar puertos en .env o usar diferentes:
-reflex run --frontend-port 3001 --backend-port 8001
-```
-
-### **❌ Error: Database connection**
-
-```bash
-# Verificar que la base de datos es accesible
-python -c "import sqlite3; sqlite3.connect('woldvirtual_crypto_3d.db').close(); print('✅ DB OK')"
-```
-
----
-
-## 📚 Estructura de Archivos Generada
-
-Después de ejecutar `reflex init` y `reflex run`:
+## 🏗️ Arquitectura Principal
 
 ```
 WoldVirtual.0.0.1/
-├── 📁 .web/                              # Archivos compilados (auto-generado)
-├── 📁 public/
-│   └── 📁 MetaversoCryptoWoldVirtual/
-│       └── 📄 rxconfig.py               # ← Configuración principal
-├── 📁 assets/                           # Recursos estáticos (auto-generado)
-├── 📄 requirements.txt                  # Dependencias (auto-generado)
-├── 📄 .gitignore                       # Git ignore (auto-generado)
-└── 📄 woldvirtual_crypto_3d.db         # Base de datos SQLite
+├── 📄 readme.md                    # Documentación principal del proyecto
+├── 📄 ESTRUCTURA_PROYECTO.md       # Este archivo - Guía de estructura
+├── 📄 Organización.md              # Documentación de organización interna
+├── 📄 LICENSE                      # Licencia MIT del proyecto
+├── 📄 .gitignore                   # Archivos ignorados por Git
+├── 📁 .github/                     # Configuración de GitHub (workflows, etc.)
+├── 📁 bakup/                       # Sistema de copias de seguridad
+├── 📁 v.0.0.25/                    # Versión anterior del proyecto
+├── 📁 frontend/                    # Interfaz de usuario y componentes
+├── 📁 baquend/                     # Backend y lógica del servidor
+├── 📁 public/                      # Archivos públicos y estáticos
+├── 📁 pruebas/                     # Pruebas de desarrollo manual
+├── 📁 tests/                       # Suite de pruebas automatizadas
+└── 📁 pytest.ini/                  # Configuración de pytest
 ```
 
----
+## 📂 Descripción Detallada de Carpetas
 
-## 🔗 Integración con Otros Componentes
+### 🔧 `.github/`
+**Propósito**: Configuración de GitHub y CI/CD
+- Workflows de GitHub Actions
+- Templates para issues y pull requests
+- Configuración de dependabot
+- Configuración de seguridad
 
-### **🎮 Con React Three.js**
+### 💾 `bakup/`
+**Propósito**: Sistema de copias de seguridad
+```
+bakup/
+├── 📁 copia_de_seguridad/          # Backup principal del proyecto
+│   ├── 📁 WoldVirtual_Crypto_3D/   # Proyecto principal
+│   ├── 📁 components/              # Componentes reutilizables
+│   ├── 📁 services/                # Servicios del sistema
+│   └── 📁 utils/                   # Utilidades y helpers
+└── 📁 recuperacion/                # Scripts de recuperación
+```
 
-El backend está configurado para CORS con:
-- `http://localhost:5173` (Vite dev server)
-- `http://localhost:3000` (Reflex frontend)
+### 📚 `v.0.0.25/`
+**Propósito**: Versión anterior del proyecto (archivada)
+- Contiene la versión anterior completa
+- Útil para comparaciones y recuperación
+- No se modifica activamente
 
-### **⛓️ Con Blockchain**
+### 🎨 `frontend/`
+**Propósito**: Interfaz de usuario y componentes frontend
+```
+frontend/
+├── 📁 components/                  # Componentes React/Vue
+├── 📁 pages/                       # Páginas de la aplicación
+├── 📁 assets/                      # Imágenes, CSS, JS
+├── 📁 styles/                      # Estilos y temas
+└── 📄 package.json                 # Dependencias de frontend
+```
 
-Variables preparadas para Web3:
-- Soporte para múltiples chains
-- Configuración de providers
-- Integración con wallets
+### ⚙️ `baquend/`
+**Propósito**: Backend y lógica del servidor
+```
+baquend/
+├── 📁 api/                         # Endpoints de la API
+├── 📁 models/                      # Modelos de datos
+├── 📁 services/                    # Lógica de negocio
+├── 📁 database/                    # Configuración de base de datos
+└── 📄 app.py                       # Aplicación principal
+```
 
-### **📊 Con Base de Datos**
+### 🌐 `public/`
+**Propósito**: Archivos públicos y estáticos
+```
+public/
+├── 📁 assets/                      # Recursos estáticos
+├── 📁 images/                      # Imágenes públicas
+├── 📁 documents/                   # Documentos públicos
+└── 📄 index.html                   # Página principal
+```
 
-- SQLite por defecto para desarrollo
-- PostgreSQL/MySQL para producción
-- Migraciones automáticas con SQLAlchemy
+### 🧪 `pruebas/`
+**Propósito**: Pruebas de desarrollo manual
+- Pruebas exploratorias
+- Scripts de testing manual
+- Casos de uso específicos
+- Debugging y troubleshooting
 
----
+### ✅ `tests/`
+**Propósito**: Suite de pruebas automatizadas
+```
+tests/
+├── 📄 test_hello_world.py          # Pruebas básicas
+├── 📄 test_woldvirtual.py          # Pruebas del proyecto principal
+├── 📄 conftest.py                  # Configuración de pytest
+└── 📁 integration/                 # Pruebas de integración
+```
+
+### ⚙️ `pytest.ini/`
+**Propósito**: Configuración de pytest
+- Configuración de test discovery
+- Opciones de ejecución
+- Configuración de reportes
+- Configuración de cobertura
+
+## 🗂️ Navegación por el Proyecto
+
+### 🚀 Para Desarrolladores Nuevos
+
+1. **Comienza con**: `readme.md` - Documentación principal
+2. **Revisa**: `ESTRUCTURA_PROYECTO.md` - Este archivo
+3. **Explora**: `frontend/` y `baquend/` - Código principal
+4. **Prueba**: `tests/` - Ejecuta las pruebas
+
+### 🔍 Para Encontrar Código Específico
+
+- **Frontend**: `frontend/components/`
+- **Backend**: `baquend/api/`
+- **Base de datos**: `baquend/models/`
+- **Pruebas**: `tests/`
+- **Configuración**: Archivos en la raíz
+
+### 🛠️ Para Desarrollo
+
+- **Nuevas características**: `frontend/` o `baquend/`
+- **Pruebas**: `tests/`
+- **Documentación**: Archivos `.md` en la raíz
+- **Configuración**: Archivos de configuración en cada carpeta
+
+## 📋 Convenciones de Nomenclatura
+
+### 📁 Carpetas
+- **Minúsculas** con guiones bajos: `copia_de_seguridad`
+- **Descriptivas**: `frontend`, `baquend`, `tests`
+- **Consistentes**: Seguir patrones establecidos
+
+### 📄 Archivos
+- **Python**: `snake_case.py`
+- **JavaScript**: `camelCase.js`
+- **CSS**: `kebab-case.css`
+- **Documentación**: `PascalCase.md`
+
+### 🏷️ Variables y Funciones
+- **Python**: `snake_case`
+- **JavaScript**: `camelCase`
+- **Constantes**: `UPPER_CASE`
+
+## 🔄 Flujo de Trabajo
+
+### 📥 Desarrollo
+1. Crear rama desde `WoldVirtual.0.0.1`
+2. Trabajar en `frontend/` o `baquend/`
+3. Añadir pruebas en `tests/`
+4. Actualizar documentación
+
+### ✅ Testing
+1. Ejecutar `pytest` en `tests/`
+2. Verificar cobertura de código
+3. Probar manualmente en `pruebas/`
+4. Validar integración
+
+### 📤 Despliegue
+1. Merge a rama principal
+2. Ejecutar pruebas completas
+3. Desplegar desde `public/`
+4. Actualizar documentación
 
 ## 🎯 Próximos Pasos
 
-Una vez que tengas el backend funcionando:
+### 🔧 Mejoras de Estructura
+- [ ] Organizar mejor `frontend/` con subcarpetas
+- [ ] Estandarizar estructura de `baquend/`
+- [ ] Mejorar documentación de cada carpeta
+- [ ] Crear guías de contribución específicas
 
-1. **✅ Backend corriendo**: `reflex run` exitoso
-2. **🎮 Integrar React**: Conectar componente Three.js
-3. **⛓️ Añadir Web3**: Integrar funcionalidades blockchain
-4. **🗄️ Configurar DB**: Setup de base de datos avanzada
-5. **🚀 Deploy**: Preparar para producción
-
----
-
-## 🤝 Contribución
-
-### **🐛 Reportar Issues**
-
-Si encuentras problemas específicos con esta configuración:
-
-1. **Verificar logs**: Revisar salida de `reflex run`
-2. **Verificar dependencias**: `pip list | grep reflex`
-3. **Verificar puertos**: `netstat -tulpn | grep :8000`
-
-### **✨ Mejoras**
-
-Las mejoras a esta configuración deben mantener:
-- ✅ Compatibilidad con Reflex actual
-- ✅ Soporte para desarrollo y producción
-- ✅ Variables de entorno configurables
-- ✅ CORS para integración React
+### 📚 Documentación
+- [ ] README específico para cada carpeta principal
+- [ ] Guías de desarrollo paso a paso
+- [ ] Documentación de API
+- [ ] Ejemplos de uso
 
 ---
 
-<div align="center">
+**Nota**: Esta estructura está diseñada para ser escalable y mantenible. Si necesitas hacer cambios, asegúrate de actualizar esta documentación.
 
-### **🚀 MetaversoCryptoWoldVirtual - El Motor del Futuro**
-
-*Esta configuración es el corazón del backend que potencia toda la experiencia del metaverso WoldVirtual. Cada configuración está optimizada para desarrollo ágil y escalabilidad en producción.*
-
-[![Verificar Config](https://img.shields.io/badge/🔧%20VERIFICAR%20CONFIG-success?style=for-the-badge)](https://localhost:8000)
-[![Ver Logs](https://img.shields.io/badge/📊%20VER%20LOGS-info?style=for-the-badge)](https://localhost:8000/admin)
-
----
-
-**Sección**: Backend Core Configuration  
-**Parte de**: [WoldVirtual Crypto 3D Ecosystem](../../../README.md)  
-**Versión**: 0.0.9 - Backend Funcional  
-**Última Actualización**: Junio 22, 2025
-
-</div>
+*Última actualización: Junio 21, 2025* 
